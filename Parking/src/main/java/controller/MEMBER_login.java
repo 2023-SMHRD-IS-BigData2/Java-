@@ -30,6 +30,6 @@ public class MEMBER_login extends HttpServlet {
 			response.sendRedirect("./main.jsp");
 		}
 
-		response.sendRedirect("./login.jsp");
+		response.sendRedirect("./main.jsp");
 	}
 }

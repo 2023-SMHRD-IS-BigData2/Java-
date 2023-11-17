@@ -19,7 +19,7 @@
 %>
 <fieldset align="center">
 	<%if(loginMember==null){ %>
-		<h1>다시 로그인 해주세요</h1>
+		<h1>메인 페이지</h1>
 	<%}else { %>
 		<h1><%=loginMember.getID() %></h1>
 	<%} %>
