@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- MEMBER은 DB로 직접 설정 해주어야함 모르면 maven_Message패키지에 sql보기 -->
+ <mapper namespace="database.MEMBER_mapper">
+ 	<insert id="joinMember" parameterType="MEMBER">
+ 		insert into MEMBER values(#{ID},#{PW},#{NAME},#{TEL},#{CAR_NUM},#{CAR_TYPE})
+ 	</insert>
+ 	
+ 	<select id="loginMember" parameterType="MEMBER">
+ 		select * from MEMBER where ID=#{ID} and PW=#{PW}
+ 	</select>
+ 
+ </mapper>
