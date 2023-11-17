@@ -9,8 +9,9 @@
  		insert into MEMBER values(#{ID},#{PW},#{NAME},#{TEL},#{CAR_NUM},#{CAR_TYPE})
  	</insert>
  	
- 	<select id="loginMember" parameterType="MEMBER">
+ 	<select id="loginMember" parameterType="MEMBER" resultType="MEMBER">
  		select * from MEMBER where ID=#{ID} and PW=#{PW}
  	</select>
- 
+
+	
  </mapper>
