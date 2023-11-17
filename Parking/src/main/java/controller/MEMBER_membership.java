@@ -33,7 +33,7 @@ public class MEMBER_membership extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("성공");
-			response.sendRedirect("./login.jsp");
+			response.sendRedirect("./main.jsp");
 		}else {
 			response.sendRedirect("./membership.jsp");
 		}

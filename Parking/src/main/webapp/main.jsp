@@ -18,14 +18,12 @@
 	if(loginMember != null){
 		System.out.print(loginMember.getID());
 	}
-	
 %>
+
+<a href="login.jsp">로그인</a><br>
+<a href="membership.jsp">회원가입</a>
+
 <fieldset align="center">
-	<%if(loginMember==null){ %>
-		<h1>메인 페이지</h1>
-	<%}else { %>
-		<h1><%=loginMember.getID() %></h1>
-	<%} %>
 	
 	<div id="map" style="width:100%; height:800px;"></div>
 	
