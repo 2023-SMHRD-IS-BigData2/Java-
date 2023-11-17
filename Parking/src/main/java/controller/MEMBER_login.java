@@ -27,6 +27,8 @@ public class MEMBER_login extends HttpServlet {
 		if (loginMember != null) {
 			// 로그인 성공
 			System.out.println("로그인 성공!");
+			HttpSession session = request.getSession();
+			session.setAttribute("loginMember", loginMember);
 			response.sendRedirect("./loginSuccess.jsp");
 		} else {
 			System.out.println("로그인 실패...");

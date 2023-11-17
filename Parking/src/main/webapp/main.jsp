@@ -11,15 +11,6 @@
 </script>
 </head>
 <body>
-
-<%
-	MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
-	
-	if(loginMember != null){
-		System.out.print(loginMember.getID());
-	}
-%>
-
 <a href="login.jsp">로그인</a><br>
 <a href="membership.jsp">회원가입</a>
 
