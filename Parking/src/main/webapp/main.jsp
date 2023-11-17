@@ -11,8 +11,20 @@
 </script>
 </head>
 <body>
-<a href="login.jsp">로그인</a><br>
-<a href="membership.jsp">회원가입</a>
+
+<%
+	MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
+%>
+
+<%if(loginMember == null){%>
+				<button href="login.jsp">로그인</button>
+			<%}else{ %>
+					<%if(loginMember.getID().equals("admin")){%>
+						<button href="main.jsp">전체회원정보</button>
+					<%}%>
+					<button href="UpdateMember.jsp">개인정보수정</button>
+					<button href="login.jsp">로그아웃</button>
+			<%}%>
 
 <fieldset align="center">
 	

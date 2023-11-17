@@ -15,10 +15,10 @@
 	<%if(loginMember == null){%>
 		<h1>로그인 한 세션 아이디를 출력 해주세요</h1>
 	<%}else{ %>
-		<fieldset>
+		<fieldset align="center">
+			<h1><%=loginMember.getID() %>님</h1>
 			<h1>환영합니다!</h1>
-			<h1>회원가입을 축하합니다. <%=loginMember.getID() %>님</h1>
-			<button onclick='location.href="main.jsp"'>시작하기</button>
+			<button onclick='location.href="main.jsp"'>홈으로 가기</button>
 		</fieldset>
 	<%}%>
 </body>
