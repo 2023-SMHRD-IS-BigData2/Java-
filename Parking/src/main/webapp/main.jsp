@@ -17,13 +17,22 @@
 %>
 
 <%if(loginMember == null){%>
-				<button href="login.jsp">로그인</button>
+				<form action="login.jsp">
+					<button>로그인</button>
+				</form>
 			<%}else{ %>
 					<%if(loginMember.getID().equals("admin")){%>
-						<button href="main.jsp">전체회원정보</button>
+					<form action="main.jsp">
+						<button>전체회원정보</button>
+					</form>
 					<%}%>
-					<button href="UpdateMember.jsp">개인정보수정</button>
-					<button href="login.jsp">로그아웃</button>
+					
+					<form action="UpdateMember.jsp">
+					<button>개인정보수정</button>
+					</form>
+					<form action="login.jsp">
+					<button>로그아웃</button>
+					</form>
 			<%}%>
 
 <fieldset align="center">

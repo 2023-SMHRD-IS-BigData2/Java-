@@ -40,5 +40,16 @@ public class MEMBER_DAO {
 		return loginMember;
 	}
 
+	public boolean IDcheck(String inputE) {
+		boolean checkE = false;
+		try {
+			checkE = sqlSession.selectOne("database.MEMBER_mapper.IDcheck",inputE);
+		} catch (Exception e) {
+			
+		}finally {
+			sqlSession.close();
+		}
+		return checkE;
+	}
 	
 }

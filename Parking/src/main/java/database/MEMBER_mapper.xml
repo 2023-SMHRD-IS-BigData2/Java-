@@ -13,5 +13,11 @@
  		select * from MEMBER where ID=#{ID} and PW=#{PW}
  	</select>
 
-	
+	<select id="IDcheck" parameterType="String" resultType="boolean"> 
+	select case when count(*)>0 then 1
+  				else 0
+  			end result
+  	from MEMBER where ID=#{ID}
+  </select>
+
  </mapper>

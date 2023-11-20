@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,42 +7,58 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="MEMBER_membership" align="center" method="post">
-		<table align="center" border="1" width="250px">
-         <tr>
-            <td>아이디</td>
-            <td><input type="text" name="ID"></td>
-         </tr>
-         <tr>
-            <td>비밀번호</td>
-            <td><input type="text" name="PW"></td>
-         </tr>
-         <tr>
-            <td>이름</td>
-            <td><input type="text" name="NAME"></td>
-         </tr>
-         <tr>
-            <td>전화번호</td>
-            <td><input type="text" name="TEL"></td>
-         </tr>
-         <tr>
-            <td>차량번호</td>
-            <td><input type="text" name="CAR_NUM"></td>
-         </tr>
-         <tr>
-            <td>차종</td>
-            <td>
-               <input type="checkbox" name="CAR_TYPE" VALUE="소형">소형
-               <input type="checkbox" name="CAR_TYPE" VALUE="중형">중형
-               <input type="checkbox" name="CAR_TYPE" VALUE="대형">대형
-            </td>
-         </tr>
-         <tr>
-                <th colspan="2">
-                    <input type="submit" value="회원가입">
-                </th>
-            </tr>
-      </table>
-</form>
+	<fieldset>
+		<form action="MEMBER_membership" method="post">
+			<input type="text" name="ID" placeholder="아이디" ID="inputE" onchange="checkE()"> 
+			<span id="resultCheck"></span> <br>
+			<input type="text" name="PW" placeholder="비밀번호"> <br>
+			<input type="text" name="NAME" placeholder="이름"> <br> 
+			<input type="text" name="TEL" placeholder="전화번호"> <br> 
+			<input type="text" name="CAR_NUM" placeholder="차량번호"> <br>
+			<select name="CAR_TYPE">
+				<option value="소형">소형</option>
+				<option value="중형">중형</option>
+				<option value="대형">대형</option>
+			</select>
+			<br> 
+			<input type="submit" value="회원가입">
+		</form>
+	</fieldset>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script type="text/javascript">
+		function checkE() {
+			var inputE = $('#inputE').val();
+
+			$.ajax({
+				//어디로 요청할 것인지
+				url : 'MEMBER_IDcheckservice',
+				//요청 데이터(json, {key:value})
+				data : {
+					'inputE' : inputE
+				},
+				//요청 방식
+				type : 'get',
+				//요청 성공
+				success : function(data) {
+					if (data == 'true') {
+						$('#resultCheck').text('사용 할 수 없는 아이디')
+						$('#resultCheck').css({
+							"color" : "red"
+						})
+					} else if (data == 'false') {
+						$('#resultCheck').text('사용 할 수 있는 아이디')
+						$('#resultCheck').css({
+							"color" : "green"
+						})
+					}
+				},
+				//요청 실패
+				error : function() {
+					alert("통신실패");
+				}
+			})
+		}
+	</script>
 </body>
 </html>
