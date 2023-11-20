@@ -31,7 +31,7 @@
 					<form action="UpdateMember.jsp">
 					<button>개인정보수정</button>
 					</form>
-					<form action="login.jsp">
+					<form action="login.html">
 					<button>로그아웃</button>
 					</form>
 			<%}%>

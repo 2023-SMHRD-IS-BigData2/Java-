@@ -31,8 +31,8 @@ public class MEMBER_login extends HttpServlet {
 			session.setAttribute("loginMember", loginMember);
 			response.sendRedirect("./loginSuccess.jsp");
 		} else {
-			//System.out.println("로그인 실패...");
-			response.sendRedirect("./login.jsp");
+			System.out.println("로그인 실패...");
+			response.sendRedirect("./login.html");
 		}
 	}
 }
