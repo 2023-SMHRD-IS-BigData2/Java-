@@ -29,9 +29,9 @@ public class MEMBER_membership extends HttpServlet {
 		int cnt = new MEMBER_DAO().joinMember(vo);
 		
 		if(cnt>0) {
-			response.sendRedirect("./login.jsp");
+			response.sendRedirect("./login.html");
 		}else {
-			response.sendRedirect("./membership.jsp");
+			response.sendRedirect("./join.html");
 		}
 		
 	}
