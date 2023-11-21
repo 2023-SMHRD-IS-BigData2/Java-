@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.PARKING;
+import model.PARKING_DAO;
 
-@WebServlet("/CAR_membership")
-public class CAR_membership extends HttpServlet {
+@WebServlet("/PARKING_membership")
+public class PARKING_membership extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
@@ -20,10 +21,20 @@ public class CAR_membership extends HttpServlet {
 		String P_FULL = request.getParameter("P_FULL");
 		String P_PRICE = request.getParameter("P_PRICE");
 		String P_TIME = request.getParameter("P_TIME");
-		String P_INFO = request.getParameter("P_INFO");
 		String P_ABLE = request.getParameter("P_ABLE");
+		String P_INFO = request.getParameter("P_INFO");
 		
-		//PARKING vo = new PARKING(P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_INFO,P_ABLE);
+		PARKING vo = new PARKING(P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_INFO,P_ABLE);
+		System.out.println(vo.toString());
 		
+		int cnt = new PARKING_DAO().joinMember(vo);
+		
+		if(cnt>0) {
+			System.out.println("주차장 정보 등록완료");
+			response.sendRedirect("./parking_main.html");
+		}else {
+			System.out.println("주차장 정보 등록실패");
+			response.sendRedirect("./car.html");
+		}
 	}
 }

@@ -4,7 +4,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import database.SqlSessionManager;
-import model.MEMBER;
 
 public class MEMBER_DAO {
 	
