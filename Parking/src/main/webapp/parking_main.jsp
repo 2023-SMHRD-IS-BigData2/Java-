@@ -11,7 +11,7 @@
 <form action="car.html" >
 	<button>주차장 정보등록</button>
 </form>
-<form action="parkingCheck.html">
+<form action="parkingloginCheck.jsp">
 	<button>주차장 정보수정</button>
 </form>
 </fieldset>

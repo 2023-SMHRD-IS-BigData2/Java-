@@ -12,7 +12,6 @@
 </head>
 <body>
 
-<!-- 은성 - 커밋용 테스트(발견하면 지워주세요) -->
 <%
 	MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
 %>

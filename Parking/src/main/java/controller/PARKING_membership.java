@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.PARKING;
 import model.PARKING_DAO;
@@ -31,6 +32,8 @@ public class PARKING_membership extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("주차장 정보 등록완료");
+			HttpSession session = request.getSession();
+			session.setAttribute("parking", vo);
 			response.sendRedirect("./parking_main.jsp");
 		}else {
 			System.out.println("주차장 정보 등록실패");

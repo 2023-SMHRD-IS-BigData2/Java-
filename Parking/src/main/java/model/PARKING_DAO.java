@@ -23,7 +23,7 @@ public class PARKING_DAO {
 		}
 		return cnt;
 	}
-
+// 주차장 실시간 정보 등록
 	public int updateParking(PARKING updateParking) {
 		int cnt =0;
 		try {
@@ -35,5 +35,18 @@ public class PARKING_DAO {
 			sqlSession.close();
 		}
 		return cnt;
+	}
+
+//	주차장명 입력 후 로그인(?)
+	public PARKING loginParking(PARKING vo) {
+		PARKING loginParking = null;
+		try {
+			loginParking =  sqlSession.selectOne("database.PARKING_mapper.loginParking",vo);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			sqlSession.close();
+		}
+		return loginParking;
 	}
 }
