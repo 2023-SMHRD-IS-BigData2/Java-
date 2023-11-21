@@ -23,8 +23,8 @@
 				</form>
 			<%}else{ %>
 					<%if(loginMember.getID().equals("admin")){%>
-					<form action="main.jsp">
-						<button>전체회원정보</button>
+					<form action="parking_main.jsp">
+						<button>주차정보등록</button>
 					</form>
 					<%}%>
 					

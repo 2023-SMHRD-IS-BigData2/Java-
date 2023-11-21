@@ -29,7 +29,7 @@ public class PARKING_check extends HttpServlet {
 			System.out.println("수정 성공!");
 			HttpSession session = request.getSession();
 			session.setAttribute("updateParking", updateParking);
-			response.sendRedirect("./parking_main.html");
+			response.sendRedirect("./parking_main.jsp");
 		} else {
 			System.out.println("수정 실패..");
 			response.sendRedirect("./parkingCheck.html");

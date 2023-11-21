@@ -31,7 +31,7 @@ public class PARKING_membership extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("주차장 정보 등록완료");
-			response.sendRedirect("./parking_main.html");
+			response.sendRedirect("./parking_main.jsp");
 		}else {
 			System.out.println("주차장 정보 등록실패");
 			response.sendRedirect("./car.html");
