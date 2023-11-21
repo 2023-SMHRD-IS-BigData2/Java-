@@ -12,3 +12,5 @@ DROP TABLE MEMBER;
 SELECT * FROM MEMBER;
 
 insert into MEMBER values('test','test','test','test','test','test');
+
+SELECT * FROM PARKING;

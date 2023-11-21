@@ -22,6 +22,8 @@ public class MEMBER_update extends HttpServlet {
 		
 		MEMBER updateMember = new MEMBER(ID,PW,CAR_NUM,CAR_TYPE);
 		
+		System.out.println(updateMember.toString());
+		
 		int cnt = new model.MEMBER_DAO().updateMember(updateMember);
 
 		// 5. 콘솔창에 수정 성공
@@ -29,11 +31,9 @@ public class MEMBER_update extends HttpServlet {
 			System.out.println("수정 성공!");
 			HttpSession session = request.getSession();
 			session.setAttribute("loginMember", updateMember);
-			// response.sendRedirect("Main.jsp");
 			response.sendRedirect("main.jsp");
 		} else {
 			System.out.println("수정 실패..");
-			// response.sendRedirect("UpdateMember.jsp");
 			response.sendRedirect("UpdateMember.jsp");
 		}
 	}
