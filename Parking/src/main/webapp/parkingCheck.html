@@ -17,12 +17,19 @@
     <div class="login__forms">
     <form action="" method="post" class="login__register" id="login-in">
         <h1 class="login__title">현재 주차장 상황</h1>
-        <div class="login__box" style="display: inline;" >
+
+        <!-- <div class="login__box" style="display: inline;" >          -->
           <i class='bx bx-user login__icon'></i>
-          주차 가능 <input type="radio" placeholder="주차가능여부" class="login__radio" name="P_YN" value="주차가능">
-          주차 불 가능 <input type="radio" placeholder="주차가능여부" class="login__radio" name="P_YN" value="주차불가능">
-        </div>
-        <br><br>
+            <!-- 주차 여유 공간 버튼 -->          
+            <div class="wrapper"> 
+             <label for="park_yn" class="park_yn_label">현재 주차 가능</label>
+              <input type="checkbox" id="switch" name="P_YN">
+              <label for="switch" class="switch_label">
+                <span class="onf_btn"></span>
+              </label>
+          </div>
+        <!-- </div> -->
+        
         <div class="login__box">
           <i class='bx bx-lock login__icon'></i>
           <input type="text" placeholder="현재 주차 대수" class="login__input" name="P_COUNT">
