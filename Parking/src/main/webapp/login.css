@@ -251,17 +251,18 @@ img {
 .logincar__register{
   bottom: -2.5rem;
 }
-  .login__radio {
-    margin-right: 5px; /* 각 라디오 버튼 사이의 간격 조정 */
+  
+}
+.login__radio {
+  margin-right: 5px; /* 각 라디오 버튼 사이의 간격 조정 */
 
-  }.login__radio+label {
-    color: #a49eac;
+}.login__radio+label {
+  color: #a49eac;
 
-  }
+}
 /* 선택된 라디오 버튼 스타일 */
 input[type=radio]{
-    border-color: #5BC7BA; /* 선택된 경우 테두리 색상 변경 예시 */
-    background-color: #5BC7BA; /* 선택된 경우 배경 색상 변경 예시 */
-    color: #fff; /* 선택된 경우 텍스트 색상 변경 예시 */
-  }
+  border-color: #5BC7BA; /* 선택된 경우 테두리 색상 변경 예시 */
+  background-color: #5BC7BA; /* 선택된 경우 배경 색상 변경 예시 */
+  color: #fff; /* 선택된 경우 텍스트 색상 변경 예시 */
 }
