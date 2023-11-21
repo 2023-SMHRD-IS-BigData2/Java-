@@ -17,7 +17,11 @@
     <div class="login__forms">
     <form action="PARKING_membership" method="post" class="login__register" id="login-in">
         <h1 class="login__title">현재 주차장 상황</h1>
-
+        <div class="login__box">
+          <i class='bx bx-lock login__icon'></i>
+          <input type="text" placeholder="주차장명" class="login__input" name="P_PLACE">
+        </div>
+        
         <!-- <div class="login__box" style="display: inline;" >          -->
           <i class='bx bx-user login__icon'></i>
             <!-- 주차 여유 공간 버튼 -->          
@@ -34,8 +38,7 @@
           <i class='bx bx-lock login__icon'></i>
           <input type="text" placeholder="현재 주차 대수" class="login__input" name="P_COUNT">
         </div>
-        <div class="login__box">
-            
+        <div class="login__box">  
             <i class='bx bx-lock login__icon'></i>
             <input type="text" placeholder="주차 가능 대수" class="login__input" name="P_POS">
           </div>
