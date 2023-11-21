@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Getter
+
 public class MEMBER {
 
 	@NonNull
@@ -20,4 +21,11 @@ public class MEMBER {
 	private String TEL;
 	private String CAR_NUM;
 	private String CAR_TYPE;
+	
+	public MEMBER (String ID, String PW, String CAR_NUM, String CAR_TYPE) { 
+	    this.ID = ID;
+	    this.PW = PW;
+	    this.CAR_NUM = CAR_NUM;
+	    this.CAR_TYPE = CAR_TYPE;
+	}
 }

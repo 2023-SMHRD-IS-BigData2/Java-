@@ -51,5 +51,18 @@ public class MEMBER_DAO {
 		}
 		return checkE;
 	}
+
+	public int updateMember(MEMBER updateMember) {
+		int cnt=0;
+		try {
+			cnt = sqlSession.update("database.MEMBER_mapper.updateMember",updateMember);
+		
+		} catch (Exception e) {
+			
+		}finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
 	
 }

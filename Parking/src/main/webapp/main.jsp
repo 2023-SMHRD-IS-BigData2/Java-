@@ -18,7 +18,7 @@
 %>
 
 <%if(loginMember == null){%>
-				<form action="login.jsp">
+				<form action="login.html">
 					<button>로그인</button>
 				</form>
 			<%}else{ %>

@@ -19,5 +19,9 @@
   			end result
   	from MEMBER where ID=#{ID}
   </select>
-
+	
+	<update id="updateMember" parameterType="MEMBER">
+  	update MEMBER set PW=#{PW}, CAR_NUM=#{CAR_NUM}, CAR_TYPE=#{CAR_TYPE}
+  	where ID=#{ID}
+  </update>
  </mapper>
