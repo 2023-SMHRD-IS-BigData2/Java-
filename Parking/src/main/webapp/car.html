@@ -17,7 +17,7 @@
       <div class="login__forms">
         
 <!--         회원가입 form -->
-        <form action="car_membership" class="logincar__register" id="login-up">
+        <form action="PARKING_membership" class="logincar__register" id="login-up" method="post">
           <h1 class="login__title">주차장 등록</h1>
           <div class="login__box">
             <i class='bx bx-user login__icon'></i> 
@@ -50,9 +50,9 @@
           </div>
           <div class="login__box">
             <ul style="list-style: none;">
-              <li><input type="checkbox" placeholder="차종" name="CAR_TYPE" value="소형" id="small"/><label for="small">소형</label></li>
-              <li><input type="checkbox" placeholder="차종" name="CAR_TYPE" value="중형"id="middle" /><label for="middle">중형</label></li>
-              <li><input type="checkbox" placeholder="차종" name="CAR_TYPE" value="대형"id="big" /><label for="big">대형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small"/><label for="small">소형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" /><label for="middle">중형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="대형"id="big" /><label for="big">대형</label></li>
             </ul>
     
           </div>
@@ -60,7 +60,7 @@
           
           <div class="login__box">
             <i class='bx bx-lock login__icon'></i>
-            <input type="text" placeholder="상세정보" class="login__input" name="CAR_NUM">
+            <input type="text" placeholder="상세정보" class="login__input" name="P_INFO">
           </div>
           
           

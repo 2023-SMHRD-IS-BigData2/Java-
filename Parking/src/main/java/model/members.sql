@@ -14,3 +14,6 @@ SELECT * FROM MEMBER;
 insert into MEMBER values('test','test','test','test','test','test');
 
 SELECT * FROM PARKING;
+
+insert into PARKING values(num_parkings.nextval,'a','a','a','a','a','a'
+ 									,'a','a',NULL,NULL,NULL);

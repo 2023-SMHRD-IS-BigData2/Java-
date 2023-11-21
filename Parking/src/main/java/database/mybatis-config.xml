@@ -4,9 +4,11 @@
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<properties resource="database/db.properties"></properties>
-  
+
+<!-- 새로운 SQL을 추가할시 1번 -->
   <typeAliases>
   		<typeAlias type="model.MEMBER" alias="MEMBER"/>
+  		<typeAlias type="model.PARKING" alias="PARKING"/>
   </typeAliases>
   
   <environments default="development">
@@ -20,7 +22,11 @@
       </dataSource>
     </environment>
   </environments>
+
+<!-- 새로운 SQL을 추가할시 2번 -->
   <mappers>
     <mapper resource="database/MEMBER_mapper.xml"/>
+    <mapper resource="database/PARKING_mapper.xml"/>
   </mappers>
+
 </configuration>
