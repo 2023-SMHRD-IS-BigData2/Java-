@@ -27,7 +27,7 @@ public class PARKING_membership extends HttpServlet {
 		PARKING vo = new PARKING(P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_INFO,P_ABLE);
 		System.out.println(vo.toString());
 		
-		int cnt = new PARKING_DAO().joinMember(vo);
+		int cnt = new PARKING_DAO().joinParking(vo);
 		
 		if(cnt>0) {
 			System.out.println("주차장 정보 등록완료");

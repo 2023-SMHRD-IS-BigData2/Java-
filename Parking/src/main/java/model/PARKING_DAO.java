@@ -11,15 +11,27 @@ public class PARKING_DAO {
 
 	SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
-	public int joinMember(PARKING vo) {
+	public int joinParking(PARKING vo) {
 		int cnt = 0;
 		System.out.println(vo.toString());
 		try {
-			cnt = sqlSession.insert("database.PARKING_mapper.joinMember", vo);
-			System.out.println("cnt" + cnt);
+			cnt = sqlSession.insert("database.PARKING_mapper.joinParking", vo);
 		} catch (Exception e) {
-			System.out.println("exep");
+			
 		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+
+	public int updateParking(PARKING updateParking) {
+		int cnt =0;
+		try {
+			cnt = sqlSession.update("database.PARKING_mapper.updateParking",updateParking);
+		
+		} catch (Exception e) {
+			
+		}finally {
 			sqlSession.close();
 		}
 		return cnt;

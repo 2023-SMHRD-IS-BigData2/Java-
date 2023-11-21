@@ -8,33 +8,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.MEMBER;
+import model.PARKING;
+import model.PARKING_DAO;
 
-@WebServlet("/MEMBER_update")
-public class MEMBER_update extends HttpServlet {
+@WebServlet("/PARKING_check")
+public class PARKING_check extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
-		String ID = request.getParameter("ID");
-		String PW = request.getParameter("PW");
-		String CAR_NUM = request.getParameter("CAR_NUM");
-		String CAR_TYPE = request.getParameter("CAR_TYPE");
+		String P_YN = request.getParameter("P_YN");
+		int P_COUNT = Integer.parseInt(request.getParameter("P_COUNT"));
+		int P_POS = Integer.parseInt(request.getParameter("P_POS"));
 		
-		MEMBER updateMember = new MEMBER(ID,PW,CAR_NUM,CAR_TYPE);
+		PARKING updateParking  = new PARKING(P_YN,P_COUNT,P_POS);
+		System.out.println(updateParking.toString());
 		
-		System.out.println(updateMember.toString());
+		int cnt = new PARKING_DAO().updateParking(updateParking);
 		
-		int cnt = new model.MEMBER_DAO().updateMember(updateMember);
-
-		// 5. 콘솔창에 수정 성공
 		if (cnt > 0) {
 			System.out.println("수정 성공!");
 			HttpSession session = request.getSession();
-			session.setAttribute("loginMember", updateMember);
-			response.sendRedirect("./main.jsp");
+			session.setAttribute("updateParking", updateParking);
+			response.sendRedirect("./parking_main.html");
 		} else {
 			System.out.println("수정 실패..");
-			response.sendRedirect("./UpdateMember.jsp");
+			response.sendRedirect("./parkingCheck.html");
 		}
 	}
 }

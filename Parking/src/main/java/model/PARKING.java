@@ -32,4 +32,10 @@ public class PARKING {
 	private String P_YN;
 	private Integer P_COUNT;
 	private Integer P_POS;
+	
+	public PARKING(String p_YN, int p_COUNT, int p_POS) {
+		this.P_YN=P_YN;
+		this.P_COUNT=P_COUNT;
+		this.P_POS=P_POS;
+	}
 }
