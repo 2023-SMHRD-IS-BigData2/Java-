@@ -1,3 +1,6 @@
+<%@page import="model.MEMBER"%>
+<%@page import="model.PARKING"%>
+<%@page import="model.BOOKING"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<% BOOKING booking = (BOOKING)session.getAttribute("booking");
+   PARKING Parking = (PARKING)session.getAttribute("Parking");
+   MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
+%>
 <form action="BOOKING_time">
 	등록일시<input type="date" name="B_DATE">~
 	종료일시<input type="date" name="B_EXDATE">
@@ -18,6 +25,10 @@
 	이용시간<input type="text" class= "timepicker" name="B_TIME">
 <br>
 <button>결제하기</button>
+<input type="hidden" name="ID" value="<%=loginMember.getID()%>">
+<input type="hidden" name="B_PLACE" value="<%=Parking.getP_PLACE()%>">
+<input type="hidden" name="B_PRICE" value="<%=Parking.getP_PRICE()%>">
+<input type="hidden" name="B_YN" value="y">
 </form>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

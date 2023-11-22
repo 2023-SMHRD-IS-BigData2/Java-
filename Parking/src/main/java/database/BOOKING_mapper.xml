@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="database.PARKING_mapper">
+<mapper namespace="database.BOOKING_mapper">
 	<insert id="joinBooking" parameterType="BOOKING">
-		insert into BOOKING(B_DATE,B_EXDATE,B_TIME) values(#{B_DATE},#{B_EXDATE},#{B_TIME},
-		#{B_NUM,jdbcType="VARCHAR"},#{ID,jdbcType="VARCHAR"},#{B_PLACE,jdbcType="VARCHAR"},#{B_PRICE,jdbcType="VARCHAR"},#{B_YN,jdbcType="VARCHAR"})
+		insert into BOOKING values(num_parkings.nextval,#{ID},#{B_DATE},#{B_EXDATE},#{B_TIME},
+		#{B_PLACE},#{B_PRICE},#{B_YN})
 	</insert>
 </mapper>
