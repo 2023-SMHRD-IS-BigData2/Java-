@@ -20,15 +20,22 @@
       </div>
     <div class="login__forms">
     <form action="PARKING_check" method="post" class="login__register" id="login-in">
-        <h1 class="login__title"> <%=parking.getP_PLACE() %><br>현재 주차장 상황</h1>
+        <h1 class="login__title"> <%=parking.getP_PLACE() %><br>실시간 정보 등록</h1>
         <!-- <div class="login__box" style="display: inline;" >          -->
           <i class='bx bx-user login__icon'></i>
             <!-- 주차 여유 공간 버튼 -->          
             <div class="wrapper"> 
              <label for="park_yn" class="park_yn_label">현재 주차 가능</label>
-              <input type="checkbox" id="switch" name="P_YN" value="주차가능">
+              <input type="checkbox" id="switch" name="P_YN" value="가능"onclick='checkOnlyOne(this)'>
               <label for="switch" class="switch_label">
                 <span class="onf_btn"></span>
+              </label>
+          </div>
+          <div class="wrappers"> 
+             <label for="parks_yn" class="parks_yn_label">현재 주차 불가능</label>
+              <input type="checkbox" id="switchs" name="P_YN" value="불가능"onclick='checkOnlyOne(this)'>
+              <label for="switchs" class="switchs_label">
+                <span class="onfs_btn"></span>
               </label>
           </div>
         <!-- </div> -->
@@ -56,5 +63,18 @@
       </div>
     </div>
 </div>
+<script>
+  function checkOnlyOne(element) {
+  
+  const checkboxes 
+      = document.getElementsByName("P_YN");
+  
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  
+  element.checked = true;
+}
+</script>
 </body>
 </html>

@@ -267,8 +267,9 @@ input[type=radio]{
   background-color: #5BC7BA; /* 선택된 경우 배경 색상 변경 예시 */
   color: #fff; /* 선택된 경우 텍스트 색상 변경 예시 */
 }
+
 /* 실시간 주차 여유 공간 -> 주차 가능 버튼 css */
-.wrapper {
+.wrapper{
   width: 50px;
   height: 50px;
   text-align: center;
@@ -279,15 +280,14 @@ input[type=radio]{
   font-weight: bolder;
   margin-top: 20%;
 }
-#switch {
+#switch{
   position: absolute;
   /* hidden */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-
-.switch_label {
+.switch_label{
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -313,7 +313,6 @@ input[type=radio]{
   background: #98cfc9;
   transition: 0.2s;
 }
-
 /* checking style */
 #switch:checked+.switch_label {
   background: #5BC7BA;
@@ -330,3 +329,66 @@ input[type=radio]{
   background: #fff;
   box-shadow: 1px 2px 3px #00000020;
 }
+
+/* 현재 주차 불가능 토글 버튼 */
+.wrappers{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  /* margin: 50px auto; */
+  white-space: nowrap;
+}
+.parks_yn_label{
+  font-weight: bolder;
+  margin-top: 20%;
+}
+#switchs{
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.switchs_label{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #98cfc9;
+  border-radius: 20px;
+  transition: 0.2s;
+  margin-left:10%;
+}
+.switchs_label:hover {
+  background: #efefef;
+}
+.onfs_btn {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #98cfc9;
+  transition: 0.2s;
+}
+/* checking style */
+#switchs:checked+.switchs_label {
+  background: #5BC7BA;
+  border: 2px solid #5BC7BA;
+}
+
+#switchs:checked+.switchs_label:hover {
+  background: #7fcac1;
+}
+
+/* move */
+#switchs:checked+.switchs_label .onfs_btn {
+  left: 32px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
