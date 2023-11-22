@@ -14,7 +14,7 @@
 </head>
 <body>
 <% BOOKING booking = (BOOKING)session.getAttribute("booking");
-   PARKING Parking = (PARKING)session.getAttribute("Parking");
+   PARKING parking = (PARKING)session.getAttribute("Parking");
    MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
 %>
 <form action="BOOKING_time">
@@ -26,8 +26,8 @@
 <br>
 <button>결제하기</button>
 <input type="hidden" name="ID" value="<%=loginMember.getID()%>">
-<input type="hidden" name="B_PLACE" value="<%=Parking.getP_PLACE()%>">
-<input type="hidden" name="B_PRICE" value="<%=Parking.getP_PRICE()%>">
+<input type="hidden" name="B_PLACE" value="<%=parking.getP_PLACE()%>">
+<input type="hidden" name="B_PRICE" value="<%=parking.getP_PRICE()%>">
 <input type="hidden" name="B_YN" value="y">
 </form>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
