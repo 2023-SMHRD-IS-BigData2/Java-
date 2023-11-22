@@ -11,8 +11,7 @@
  	</insert>
  	
  	<update id="updateParking" parameterType="PARKING">
- 		update PARKING set P_TYPE=#{P_TYPE},P_ADDRESS=#{P_ADDRESS},P_FULL=#{P_FULL},P_PRICE=#{P_PRICE},P_TIME=#{P_TIME}
- 									,P_ABLE=#{P_ABLE},P_YN=#{P_YN}, P_COUNT=#{P_COUNT}, P_POS=#{P_POS}
+ 		update PARKING set P_YN=#{P_YN}, P_COUNT=#{P_COUNT}, P_POS=#{P_POS}
   	where P_PLACE=#{P_PLACE}
  	</update>
  	

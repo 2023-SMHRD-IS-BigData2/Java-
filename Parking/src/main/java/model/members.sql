@@ -17,3 +17,5 @@ SELECT * FROM PARKING;
 
 insert into PARKING values(num_parkings.nextval,'a','a','a','a','a','a'
  									,'a','a',NULL,NULL,NULL);
+ 									
+update PARKING set P_YN = '주차가능', P_COUNT = 50, P_POS = 10 where P_PLACE = '서영주차장';

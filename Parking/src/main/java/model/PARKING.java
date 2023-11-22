@@ -35,12 +35,12 @@ public class PARKING {
 	private Integer P_COUNT;
 	private Integer P_POS;
 	
-	public PARKING(String P_PLACE,String P_YN, int P_COUNT, int P_POS) {
-		this.P_PLACE=P_PLACE;
-		this.P_YN=P_YN;
-		this.P_COUNT=P_COUNT;
-		this.P_POS=P_POS;
-	}
+//	public PARKING(String P_PLACE,String P_YN, int P_COUNT, int P_POS) {
+//		this.P_PLACE=P_PLACE;
+//		this.P_YN=P_YN;
+//		this.P_COUNT=P_COUNT;
+//		this.P_POS=P_POS;
+//	}
 
 	public PARKING(String P_PLACE) {
 		this.P_PLACE=P_PLACE;

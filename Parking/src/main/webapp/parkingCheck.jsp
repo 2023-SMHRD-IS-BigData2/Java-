@@ -41,7 +41,7 @@
             <i class='bx bx-lock login__icon'></i>
             <input type="text" placeholder="주차 가능 대수" class="login__input" name="P_POS">
             <!-- 숨겨 놓기!!! -->
-        <input type="hidden" name="P_PlACE" value="<%=parking.getP_PLACE() %>">
+        <input type="hidden" name="P_PlACE" value="<%=parking.getP_PLACE()%>">
         <input type="hidden" name="P_TYPE" value="<%=parking.getP_TYPE()%>">
         <input type="hidden" name="P_ADDRESS" value="<%=parking.getP_ADDRESS()%>">
         <input type="hidden" name="P_FULL" value="<%=parking.getP_FULL()%>">
