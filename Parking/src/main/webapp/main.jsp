@@ -33,6 +33,10 @@
 					<form action="login.html">
 					<button>로그아웃</button>
 					</form>
+					<form action="bookingSuccess.jsp">
+					<!-- test 중 예약 성공 화면 입니다. 예약 화면 기능 구현 후 연결 해주세요 -서영- -->
+					<button>예약성공화면</button>
+					</form>
 			<%}%>
 
 <fieldset align="center">
