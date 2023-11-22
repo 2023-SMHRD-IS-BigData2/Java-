@@ -18,7 +18,7 @@
 	<div class="login">
         <div class="login__content">
           <div class="login__img">
-            <img src="./WEB-INF/lib/file/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
+            <img src="./resources/img/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
           </div>
 <%if(loginMember == null){%>
 		<h1>로그인 한 세션 아이디를 출력 해주세요</h1>
