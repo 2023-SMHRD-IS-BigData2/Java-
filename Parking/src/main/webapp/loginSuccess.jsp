@@ -16,17 +16,16 @@
 	%>
 
 	<div class="login">
-        <div class="login__content">
+        <div class="login__content_success">
           <div class="login__img">
-            <img src="./resources/img/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
+            <img src="./resources/img/주차랑께.png" alt="user login">
           </div>
 <%if(loginMember == null){%>
-		<h1>로그인 한 세션 아이디를 출력 해주세요</h1>
+		<h1>로그인 실패하셨습니다.</h1>
 	<%}else{ %>                 
           <div class="login__forms">            
-            <form action="main.jsp" class="login__create" id="login-up">
-            
-              <h1 class="login__title"><%=loginMember.getID() %>님 환영합니다!</h1>
+            <form action="main.jsp" class="login__success" id="login-up"> 
+              <h1 class="login__success_title"><%=loginMember.getID() %>님 환영합니다!</h1>
               <input type="submit" class="login__buttons btnFloat" value="홈으로 돌아가기">
              
               

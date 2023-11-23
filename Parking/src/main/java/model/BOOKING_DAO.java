@@ -13,6 +13,7 @@ public class BOOKING_DAO {
 		//connection, close, sql문 실행...
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		
+		// 주차장 정보 insert
 		public int joinBooking(BOOKING vo) {
 			int cnt = 0;
 
@@ -25,5 +26,17 @@ public class BOOKING_DAO {
 			}
 
 			return cnt;
+		}
+		//주차장 명 입력 후 예약하기위한 주차장명 데이터 가져오기(로그인)
+		public PARKING loginParking(PARKING vo) {
+			PARKING loginParking = null;
+			try {
+				loginParking =  sqlSession.selectOne("database.PARKING_mapper.loginParking",vo);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}finally {
+				sqlSession.close();
+			}
+			return loginParking;
 		}
 }

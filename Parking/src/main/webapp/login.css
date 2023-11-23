@@ -34,25 +34,30 @@ img {
 }
 .login__content {
   display: grid;
+  align-content: space-around;
+}
+.login__content_success{
+  display: grid;
+  align-content: space-evenly;
 }
 .login__img {
   justify-self: center;
+  height: 150px;
 }
 .login__img img {
-  width: 310px;
-  position: absolute;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 .login__forms {
   position: relative;
-  height: 368px;
+  height: 50%
 }
 /* .login_success__forms{
     align-content: center;
     position: relative;
     width: 348px;
 } */
-.login__register, .login__create {
+.login__register{
   position: absolute;
   bottom: 1rem;
   width: 100%;
@@ -64,9 +69,35 @@ img {
   animation-duration: 0.4s;
   animation-name: animateLogin;
 }
-.logincar__register{
-  position: absolute;
+.login__create {
+  position: relative;
   /* bottom: 1rem; */
+  top: 30%;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35, 0, 77, 0.2);
+  animation-duration: 0.4s;
+  animation-name: animateLogin;
+}
+.logincar__register{
+  /* position: absolute; */
+  bottom: 100px;
+  margin-bottom: 60px;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35, 0, 77, 0.2);
+  animation-duration: 0.4s;
+  animation-name: animateLogin;
+}
+.login__success{
+  position: relative;
+  bottom: 6rem;
   width: 100%;
   background-color: #f2f2f2;
   padding: 2rem 1rem;
@@ -79,6 +110,9 @@ img {
 .login__title {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+.login__success_title{
+  font-size: 1.5rem;
 }
 .login__box {
   display: grid;
@@ -217,43 +251,7 @@ img {
     justify-self: center;
   }
 }
-@media screen and (min-width: 1024px) {
-  .login {
-    height: 100vh;
-    overflow: hidden;
-  }
-  .login__content {
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    align-items: center;
-    margin-left: 10rem;
-  }
-  .login__img {
-    display: flex;
-    width: 600px;
-    height: 588px;
-    background-color: #fff;
-    /* border-radius: 1rem; */
-    /* padding-left: 1rem; */
-  }
-  .login__img img {
-    width: 80%;
-    margin-top: 0;
-  }
-  .login__register, .login__create {
-    left: -11rem;
-  }
-  .login__register {
-    bottom: -2rem;
-  }
-  .login__create {
-    bottom: -5.5rem;
-  }
-.logincar__register{
-  bottom: -2.5rem;
-}
-  
-}
+
 .login__radio {
   margin-right: 5px; /* 각 라디오 버튼 사이의 간격 조정 */
 
@@ -279,6 +277,7 @@ input[type=radio]{
 .park_yn_label{
   font-weight: bolder;
   margin-top: 20%;
+  bottom: 30%;
 }
 #switch{
   position: absolute;
@@ -298,6 +297,8 @@ input[type=radio]{
   border-radius: 20px;
   transition: 0.2s;
   margin-left:10%;
+  margin-top: 10%;
+  padding-top: 10%;
 }
 .switch_label:hover {
   background: #efefef;

@@ -8,21 +8,14 @@
 </head>
 <body>
     <!-- 예약 form -->
-    <div class="login">
-        <div class="login__content">
-          <div class="login__img">
-            <img src="./META-INF/imges/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
-          </div>
-          <div class="login__forms">
-            <form action="./booking_time.jsp" method="post" class="login__register" id="login-in">
-              <h1 class="login__title">예약하기</h1>
-              <div class="login__box">
-                <i class='bx bx-user login__icon'></i>
-                <input type="submit" class="login__input" value="예약하기" >
-              </div>
-            </form>
-          </div>
-        </div>
-       </div>
+    
+    <!-- 아직 주차장 상세 페이지가 구현되지 않아서
+    	지금 임시로 주차장명을 입력하면 그 주차장 정보 불러오게 끔 구현  -->
+    <form action="./BOOKING_login_time" method="post">
+   	<input type="text" placeholder="예약할 주차장 명 "name="P_PLACE" >
+   	<input type="submit" value="제출">
+   </form>
+
+   
 </body>
 </html>

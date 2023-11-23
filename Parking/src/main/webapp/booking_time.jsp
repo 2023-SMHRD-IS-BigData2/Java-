@@ -13,16 +13,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% BOOKING booking = (BOOKING)session.getAttribute("booking");
+<% 
    PARKING parking = (PARKING)session.getAttribute("Parking");
    MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
 %>
-<form action="BOOKING_time">
-	등록일시<input type="date" name="B_DATE">~
-	종료일시<input type="date" name="B_EXDATE">
+<form action="BOOKING_time" method="post">
+	<!-- B_DATE는 사용자가 등록한 시간 ->관리자만 볼 수 있음 sysdate 처리-->
+	<%=loginMember.getID()%>님
+	일시<input type="date" name="B_DATE">
 
 <br>
 	이용시간<input type="text" class= "timepicker" name="B_TIME">
+	장소 : <%=parking.getP_PLACE()%>
+	가격 : <%=parking.getP_PRICE()%>
 <br>
 <button>결제하기</button>
 <input type="hidden" name="ID" value="<%=loginMember.getID()%>">

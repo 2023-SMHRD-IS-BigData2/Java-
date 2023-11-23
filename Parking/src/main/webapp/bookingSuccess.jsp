@@ -16,18 +16,17 @@
 	%>
 
 	<div class="login">
-        <div class="login__content">
+        <div class="login__content_success">
           <div class="login__img">
-            <img src="./WEB-INF/lib/file/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
+            <img src="./resources/img/주차랑께.png" alt="user login">
           </div>
 <%if(loginMember == null){%>
 		<h1>페이지가 응답하지 않습니다 다시 시도해 주세요</h1>
 	<%}else{ %>                 
           <div class="login__forms">            
-            <form action="main.jsp" class="login__create" id="login-up">
-            
-              <h1 class="login__title"><%=loginMember.getID() %>님<br>
-               "주차장이름"주차장 예약이 완료되었습니다!</h1>
+            <form action="main.jsp" class="login__success" id="login-up">          
+              <h1 class=".login__success_title"><%=loginMember.getID() %>님 <br>
+              "주차장이름" 예약이<br> 완료되었습니다!</h1>
               <input type="submit" class="login__buttons btnFloat" value="홈으로 돌아가기">
                            
             </form>

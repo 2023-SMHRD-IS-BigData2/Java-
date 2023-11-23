@@ -5,18 +5,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
+@NoArgsConstructor 
+@RequiredArgsConstructor
 @Getter
-
+@Setter
+@ToString
 public class BOOKING {
-	private Integer B_NUM;
-	private String ID;
-	private String B_DATE;
-	private String B_EXDATE;
-	private String B_TIME;
-	private String B_PLACE;
-	private String B_PRICE;
-	private String B_YN;
 	
+	private int num; 
+	@NonNull private String ID;
+	private String sysdate;
+	@NonNull private String B_DATE;
+	@NonNull private String B_TIME;
+	@NonNull private String B_PLACE;
+	@NonNull private String B_PRICE;
+	@NonNull private String B_YN;
+	
+	public BOOKING(String B_PLACE) {
+		this.B_PLACE=B_PLACE;
+	}
 }

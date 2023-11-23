@@ -5,7 +5,12 @@
 
 <mapper namespace="database.BOOKING_mapper">
 	<insert id="joinBooking" parameterType="BOOKING">
-		insert into BOOKING values(num_parkings.nextval,#{ID},#{B_DATE},#{B_EXDATE},#{B_TIME},
+		insert into BOOKING values(NUM_BOOKING.NEXTVAL,#{ID},sysdate,#{B_EXDATE},#{B_TIME},
 		#{B_PLACE},#{B_PRICE},#{B_YN})
 	</insert>
+	
+	<!-- 주차장명 입력시 주차장 데이터 가져오기 위한 로그인.. -->
+	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_PLACE=#{P_PLACE}
+ 	</select>
 </mapper>
