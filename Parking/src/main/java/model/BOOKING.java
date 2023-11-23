@@ -16,14 +16,15 @@ import lombok.ToString;
 @ToString
 public class BOOKING {
 	
-	private int num; 
+	private int B_NUM; 
 	@NonNull private String ID;
-	private String sysdate;
-	@NonNull private String B_DATE;
+	private String B_DATE;
+	@NonNull private String B_EXDATE;
 	@NonNull private String B_TIME;
 	@NonNull private String B_PLACE;
 	@NonNull private String B_PRICE;
 	@NonNull private String B_YN;
+	@NonNull private int B_EXTIME;
 	
 	public BOOKING(String B_PLACE) {
 		this.B_PLACE=B_PLACE;
