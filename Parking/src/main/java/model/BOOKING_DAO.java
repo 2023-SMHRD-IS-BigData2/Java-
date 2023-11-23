@@ -16,11 +16,12 @@ public class BOOKING_DAO {
 		// 주차장 정보 insert
 		public int joinBooking(BOOKING vo) {
 			int cnt = 0;
-
+			
 			try {
 				cnt = sqlSession.insert("database.BOOKING_mapper.joinBooking", vo);
+				System.out.println("cnt");
 			} catch (Exception e) {
-
+				e.printStackTrace();
 			} finally {
 				sqlSession.close();
 			}

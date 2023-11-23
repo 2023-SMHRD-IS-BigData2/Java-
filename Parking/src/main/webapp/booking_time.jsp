@@ -17,15 +17,20 @@
    PARKING parking = (PARKING)session.getAttribute("Parking");
    MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
 %>
-<form action="BOOKING_time" method="post">
+<form action="BOOKING_time" method="post" autocomplete="off">
 	<!-- B_DATE는 사용자가 등록한 시간 ->관리자만 볼 수 있음 sysdate 처리-->
-	<%=loginMember.getID()%>님
-	일시<input type="date" name="B_DATE">
+	<%=loginMember.getID()%>님 예약화면<br>
+	장소 : <%=parking.getP_PLACE()%>
+	<br>
+	시간 당 가격 : <%=parking.getP_PRICE()%>
+	<br>
+	주차 할 날짜 : <input type="date" name="B_EXDATE">
 
 <br>
-	이용시간<input type="text" class= "timepicker" name="B_TIME">
-	장소 : <%=parking.getP_PLACE()%>
-	가격 : <%=parking.getP_PRICE()%>
+	입차시간 : <input type="text" class= "timepicker" name="B_TIME">
+	<br>
+	몇 시간 이용 하실 건가요? <input type="text" name="B_EXTIME">
+	
 <br>
 <button>결제하기</button>
 <input type="hidden" name="ID" value="<%=loginMember.getID()%>">
@@ -40,14 +45,15 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$('input.timepicker').timepicker({
-            timeFormat: 'HH:mm',
-            interval: 60,
+            timeFormat: 'HH:mm:ss',
+            interval: 30,
             startTime: '00:00',
             dynamic: false,
             dropdown: true,
             scrollbar: true
         });
     })
+
 </script>
 </body>
 </html>
