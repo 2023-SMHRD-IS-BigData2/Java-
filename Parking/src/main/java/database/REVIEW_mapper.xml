@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="database.REVIEW_mapper">
+  	<insert id="loginREVIEW" parameterType="REVIEW">
+		insert into REVIEW values(#{ID},#{R_1},#{R_2},#{R_3},
+		#{R_4},#{R_5})
+	</insert>
+	
+  	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_CODE=#{P_CODE}
+ 	</select>
+  </mapper>

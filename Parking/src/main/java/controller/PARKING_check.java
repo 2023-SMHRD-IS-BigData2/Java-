@@ -40,7 +40,7 @@ public class PARKING_check extends HttpServlet {
 		int P_COUNT = Integer.parseInt(request.getParameter("P_COUNT"));
 		int P_POS = Integer.parseInt(request.getParameter("P_POS"));
 		System.out.println(P_PLACE);
-		PARKING updateParking  = new PARKING(P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_ABLE,P_INFO,P_YN,P_COUNT,P_POS);
+		PARKING updateParking  = new PARKING(0,P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_ABLE,P_INFO,P_YN,P_COUNT,P_POS);
 		System.out.println(updateParking.toString());
 		
 		int cnt = new model.PARKING_DAO().updateParking(updateParking);

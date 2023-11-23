@@ -15,6 +15,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class PARKING {
+	private int P_CODE;
 	@NonNull
 	private String P_PLACE;
 	@NonNull
@@ -44,6 +45,10 @@ public class PARKING {
 
 	public PARKING(String P_PLACE) {
 		this.P_PLACE=P_PLACE;
+	}
+
+	public PARKING(int P_CODE) {
+		this.P_CODE=P_CODE;
 	}
 
 }
