@@ -15,13 +15,11 @@
     <!-- 주차장 여유공간 등록 화면 -->
     <div class="login">
     <div class="login__content">
-      <div class="login__img">
-        <img src="./resources/img/주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
-      </div>
+      
     <div class="login__forms">
-    <form action="PARKING_check" method="post" class="login__register" id="login-in">
+    <form action="PARKING_check" method="post" class="login__create" id="login-in">
         <h1 class="login__title"> <%=parking.getP_PLACE() %><br>실시간 정보 등록</h1>
-        <!-- <div class="login__box" style="display: inline;" >          -->
+        <!--  <div class="login__box" style="display: inline;" >     -->      
           <i class='bx bx-user login__icon'></i>
             <!-- 주차 여유 공간 버튼 -->          
             <div class="wrapper"> 

@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -82,6 +83,19 @@ img {
   animation-duration: 0.4s;
   animation-name: animateLogin;
 }
+.login__car_check {
+  /*position: relative;*/
+  bottom: 1rem;
+  top: 30%;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35, 0, 77, 0.2);
+  animation-duration: 0.4s;
+  animation-name: animateLogin;
+}
 .logincar__register{
   /* position: absolute; */
   bottom: 100px;
@@ -109,6 +123,7 @@ img {
 }
 .login__title {
   font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 .login__success_title{

@@ -36,7 +36,7 @@ public class BOOKING_time extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("완료");
-			response.sendRedirect("./booking.html");
+			response.sendRedirect("./main.jsp");
 		}else {
 			System.out.println("실패");
 			response.sendRedirect("./booking_time.jsp");
