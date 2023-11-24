@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import model.PARKING;
 import model.PARKING_DAO;
+import model.REVIEW;
+import model.REVIEW_DAO;
 
 @WebServlet("/REVIEW_login")
 public class REVIEW_login extends HttpServlet {
@@ -18,14 +22,14 @@ public class REVIEW_login extends HttpServlet {
 		
 		int P_CODE = Integer.parseInt(request.getParameter("P_CODE"));
 		
-		PARKING vo = new PARKING(P_CODE);
-		PARKING loginParking = new PARKING_DAO().loginParking(vo);
+		REVIEW vo = new REVIEW(P_CODE);
+		REVIEW loginParking = new REVIEW_DAO().loginParking(vo);
 		System.out.println(P_CODE);
 		if (loginParking != null) {
 			// 주차장 로그인(?) 성공
 			System.out.println("로그인 성공!");
 			HttpSession session = request.getSession();
-			session.setAttribute("Parking", loginParking);
+			session.setAttribute("REVIEW", loginParking);
 			response.sendRedirect("./review_success.jsp");
 		} else {
 			System.out.println("로그인 실패...");

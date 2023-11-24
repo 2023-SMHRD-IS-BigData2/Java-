@@ -45,6 +45,10 @@
 					<form action="bookingSuccess.jsp">					
 					<button>예약성공화면</button>
 					</form>
+					
+					<form action="review.html">
+					<input type="submit" value="리뷰하기">
+					</form>
 			<%}%>
 
 <fieldset align="center">

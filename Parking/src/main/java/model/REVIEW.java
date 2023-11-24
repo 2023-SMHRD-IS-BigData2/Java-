@@ -30,4 +30,7 @@ public class REVIEW {
 	@NonNull
 	private String R_5;
 	
+	public REVIEW(int P_CODE) {
+		this.P_CODE=P_CODE;
+	}
 }

@@ -1,3 +1,4 @@
+<%@page import="java.util.List"%>
 <%@page import="model.REVIEW"%>
 <%@page import="model.PARKING"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -10,18 +11,20 @@
 </head>
 <body>
 <%
-PARKING parking = (PARKING)session.getAttribute("Parking");
-REVIEW loginREVIEW = (REVIEW)session.getAttribute("loginREVIEW");
+REVIEW review = (REVIEW)session.getAttribute("REVIEW");
 %>
 
+
+
+
 <form action="review.html" method="post">
-	<input type="hidden" name="ID" value="<%=parking.getP_CODE()%>">
-	ID<%= loginREVIEW.getID() %>
-	R_1<%= loginREVIEW.getR_1() %>
-	R_2<%= loginREVIEW.getR_2() %>
-	R_3<%= loginREVIEW.getR_3() %>
-	R_4<%= loginREVIEW.getR_4() %>
-	R_5<%= loginREVIEW.getR_5() %>
+	<input type="hidden" name="P_CODE" value="<%=review.getP_CODE()%>">
+	<input type="hidden" value="<%= review.getID() %>">
+	R_1:<%= review.getR_1() %><br>
+	R_2:<%= review.getR_2() %><br>
+	R_3:<%= review.getR_3() %><br>
+	R_4:<%= review.getR_4() %><br>
+	R_5:<%= review.getR_5() %>
 </form>
 </body>
 </html>
