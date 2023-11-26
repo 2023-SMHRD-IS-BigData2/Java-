@@ -6,7 +6,10 @@
   <mapper namespace="database.REVIEW_mapper">
   
   	<select id="loginParking" parameterType="REVIEW" resultType="REVIEW">
- 		select * from REVIEW where P_CODE=#{P_CODE}
+ 		SELECT P_CODE,ID,SUM(R_1) AS R_1 ,SUM(R_2) AS R_2 ,SUM(R_3) AS R_3 ,SUM(R_4) AS R_4 ,SUM(R_5) AS R_5 
+		FROM review
+		WHERE P_CODE=#{P_CODE}
+		group by P_CODE,ID
  	</select>
  	
  	<!-- 

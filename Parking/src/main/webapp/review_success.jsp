@@ -19,7 +19,7 @@ REVIEW review = (REVIEW)session.getAttribute("REVIEW");
 
 <form action="review.html" method="post">
 	<input type="hidden" name="P_CODE" value="<%=review.getP_CODE()%>">
-	<input type="hidden" value="<%= review.getID() %>">
+	ID <%= review.getID() %><br>
 	R_1:<%= review.getR_1() %><br>
 	R_2:<%= review.getR_2() %><br>
 	R_3:<%= review.getR_3() %><br>
