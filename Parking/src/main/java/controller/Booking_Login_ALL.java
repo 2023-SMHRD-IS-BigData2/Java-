@@ -24,10 +24,10 @@ public class Booking_Login_ALL extends HttpServlet {
 		String ID = request.getParameter("ID");
 		System.out.println(ID);
 		
-		BOOKING vo =  new BOOKING(ID);
-		List<BOOKING> logniBooking = new BOOKING_DAO().loginBooking();
-		
-		System.out.println(vo.toString());
+//		BOOKING vo =  new BOOKING(ID);
+		List<BOOKING> logniBooking = new BOOKING_DAO().loginBooking(ID);
+		System.out.println(logniBooking.size());
+		System.out.println(ID.toString());
 		
 		if (logniBooking != null) {
 			// 예약내역 주차장 로그인(?) 성공

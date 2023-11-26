@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <% List<BOOKING> booking = (List<BOOKING>)new BOOKING_DAO().loginBooking();
+    <% List<BOOKING> booking = (List<BOOKING>)new BOOKING_DAO();
     System.out.print(booking.size());
 			pageContext.setAttribute("Booking",booking);%>
     <nav class="nav2">

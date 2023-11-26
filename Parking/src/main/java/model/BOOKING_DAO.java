@@ -43,10 +43,10 @@ public class BOOKING_DAO {
 			return loginParking;
 		}
 		//주차장 명 입력 후 예약 내역 가져오기 
-		public List<BOOKING> loginBooking() {
+		public List<BOOKING> loginBooking(String ID) {
 			List<BOOKING> loginBooking = null;
 			try {
-				loginBooking = sqlSession.selectList("data.BOOKING_mapper.loginBooking");
+				loginBooking = sqlSession.selectList("data.BOOKING_mapper.loginBooking",ID);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}finally {
@@ -54,5 +54,5 @@ public class BOOKING_DAO {
 			}
 			return loginBooking;
 		}
-
+		
 }
