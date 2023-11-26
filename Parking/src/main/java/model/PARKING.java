@@ -46,9 +46,4 @@ public class PARKING {
 	public PARKING(String P_PLACE) {
 		this.P_PLACE=P_PLACE;
 	}
-
-	public PARKING(int P_CODE) {
-		this.P_CODE=P_CODE;
-	}
-
 }
