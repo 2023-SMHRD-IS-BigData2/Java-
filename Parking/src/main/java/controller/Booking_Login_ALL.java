@@ -26,7 +26,6 @@ public class Booking_Login_ALL extends HttpServlet {
 		
 //		BOOKING vo =  new BOOKING(ID);
 		List<BOOKING> logniBooking = new BOOKING_DAO().loginBooking(ID);
-		System.out.println(logniBooking.size());
 		System.out.println(ID.toString());
 		
 		if (logniBooking != null) {

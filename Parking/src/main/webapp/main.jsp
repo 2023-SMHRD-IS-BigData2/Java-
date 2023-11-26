@@ -1,3 +1,4 @@
+<%@page import="model.BOOKING"%>
 <%@page import="model.MEMBER"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -49,6 +50,7 @@
             <!-- 로그인 값이 없으면 if 안이 뜨고 있으면 else 안이 뜨게 해야함.. -->
             <%
 	MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");
+          
 %>
             <%if(loginMember == null){%>
             <a href="login.html" class="nav_list1">
@@ -64,7 +66,6 @@
                     <button class="nav_menu">마이페이지</button>
                 </li>
             </a>
-      <%} %>
             <a href="#" class="nav_list2">
                 <li class="nav_list_in">
                     <button class="nav_icon"><i class="fa-regular fa-calendar-check"></i></button>
@@ -77,6 +78,8 @@
                     <button class="nav_menu">즐겨찾기</button>
                 </li>
             </a>
+      <%} %>
+            
             <a href="#" class="nav_list4">
                 <li class="nav_list_in">
                     <button class="nav_icon"><i class="fa-solid fa-gear"></i></button>
@@ -88,10 +91,10 @@
     <iframe src="./detail.html"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()">
     </iframe>
-    <iframe src="./detail2.html"
+    <iframe src="./detail2.jsp"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()">
     </iframe>
-    <iframe src="./detail3.html"
+    <iframe src="./detail3.jsp"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()">
     </iframe>
     <nav class="nav5" id="nav5">

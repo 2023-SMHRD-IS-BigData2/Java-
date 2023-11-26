@@ -10,10 +10,10 @@ import database.SqlSessionManager;
 public class BOOKING_DAO {
 	
 	//세션을 생성해 줄 수 있는 Factory 생성
-		SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+		static SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 			
 		//connection, close, sql문 실행...
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		static SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		
 		// 주차장 정보 insert
 		public int joinBooking(BOOKING vo) {
@@ -43,7 +43,7 @@ public class BOOKING_DAO {
 			return loginParking;
 		}
 		//주차장 명 입력 후 예약 내역 가져오기 
-		public List<BOOKING> loginBooking(String ID) {
+		public static List<BOOKING> loginBooking(String ID) {
 			List<BOOKING> loginBooking = null;
 			try {
 				loginBooking = sqlSession.selectList("data.BOOKING_mapper.loginBooking",ID);

@@ -1,3 +1,7 @@
+<%@page import="model.BOOKING"%>
+<%@page import="model.MEMBER"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +10,14 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<% 	MEMBER loginMember = (MEMBER)session.getAttribute("loginMember"); 
+BOOKING booking=  (BOOKING)session.getAttribute("Booking");%>
  <nav class="nav3" id="nav3">
         <ul class="nav3_center">
             <li class="nav3_userbox">
                 <p><img class="main_img" src="./resources/img/주차랑께.png" alt=""></p>
                 <div class="nav3_userprofile"></div>
-                <div class="nav3_username">로그인시이름</div>
+                <div class="nav3_username"><%=loginMember.getNAME() %>님</div>
                 <button class="nav3_del" onclick="userinfo_del()"><i class="fa-solid fa-x"></i></button>
             </li>
         </ul>
@@ -28,7 +33,11 @@
             <ul class="nav3_btnframei">
      
                 <li class="nav3_buttoni2">
+                <form action="detail3.jsp">  
+                    <input type="hidden" value="<%=loginMember.getNAME() %>" name="ID">
+                    <input type="submit" value="결제내역">
                     <button onclick="go_nav4()">결제내역</button>
+                    </form>
                 </li>
             
             </ul>
