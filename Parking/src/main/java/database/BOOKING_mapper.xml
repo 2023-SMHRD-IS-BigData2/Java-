@@ -13,4 +13,10 @@
 	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
  		select * from PARKING where P_PLACE=#{P_PLACE}
  	</select>
+ 	
+ 	<!-- 주차장명 입력시 예약내역 데이터 가져오기 위한 로그인.. -->
+	<select id="loginBooking" parameterType="BOOKING" resultType="BOOKING">
+ 		select * from BOOKING where ID=#{ID}
+ 	</select>
+ 	
 </mapper>

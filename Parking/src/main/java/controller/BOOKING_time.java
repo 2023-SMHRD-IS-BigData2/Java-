@@ -17,8 +17,7 @@ import model.PARKING;
 public class BOOKING_time extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		PARKING parking = (PARKING)session.getAttribute("Parking");
-//		MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");		
+		
 		request.setCharacterEncoding("UTF-8");
 		
 		String ID = request.getParameter("ID");
@@ -36,6 +35,8 @@ public class BOOKING_time extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("완료");
+			HttpSession session = request.getSession();
+			session.setAttribute("Booking", vo);
 			response.sendRedirect("./main.jsp");
 		}else {
 			System.out.println("실패");

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -40,4 +42,17 @@ public class BOOKING_DAO {
 			}
 			return loginParking;
 		}
+		//주차장 명 입력 후 예약 내역 가져오기 
+		public List<BOOKING> loginBooking() {
+			List<BOOKING> loginBooking = null;
+			try {
+				loginBooking = sqlSession.selectList("data.BOOKING_mapper.loginBooking");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return loginBooking;
+		}
+
 }
