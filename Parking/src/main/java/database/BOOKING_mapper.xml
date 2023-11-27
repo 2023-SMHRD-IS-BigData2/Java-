@@ -5,7 +5,7 @@
 
 <mapper namespace="database.BOOKING_mapper">
 	<insert id="joinBooking" parameterType="BOOKING">
-		insert into BOOKING(B_NUM,ID,B_DATE,B_EXDATE,B_TIME,B_PLACE,B_PRICE,B_YN,B_EXTIME) values(NUM_BOOKING.NEXTVAL,#{ID},sysdate,#{B_EXDATE},#{B_TIME},
+		insert into BOOKING(B_NUM,ID,B_DATE,B_EXDATE,B_TIME,B_PLACE,B_PRICE,B_YN,B_EXTIME) values(NUM_BOOKINGS.NEXTVAL,#{ID},sysdate,#{B_EXDATE},#{B_TIME},
 		#{B_PLACE},#{B_PRICE},#{B_YN},#{B_EXTIME})
 	</insert>
 	

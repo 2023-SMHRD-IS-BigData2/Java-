@@ -48,13 +48,33 @@
             <i class='bx bx-lock login__icon'></i>
             <input type="text" placeholder="운영시간" class="login__input" name="P_TIME">
           </div>
-          <div class="login__box">
+          <div class="login__boxcheck">
             <ul style="list-style: none;">
-              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small"/><label for="small">소형</label></li>
-              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" /><label for="middle">중형</label></li>
-              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="대형"id="big" /><label for="big">대형</label></li>
+            <li><label for="small" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small" checked="checked" />
+					<span class="on"></span>
+					소형
+				</label></li>
+				<li><label for="middle" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" checked="checked" />
+					<span class="on"></span>
+					중형
+				</label></li>
+				<li><label for="big" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE"value="대형"id="big" checked="checked" />
+					<span class="on"></span>
+					대형
+				</label></li>
+				<!--  
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small"/>
+              <label for="small" >소형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" />
+              <label for="middle">중형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="대형"id="big" />
+              <label for="big">대형</label></li>
+              -->
             </ul>
-    
+    		
           </div>
           
           

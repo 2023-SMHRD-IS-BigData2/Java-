@@ -26,7 +26,8 @@ public class BOOKING_time extends HttpServlet {
 		String B_PLACE =request.getParameter("B_PLACE");
 		String B_PRICE = request.getParameter("B_PRICE");
 		String B_YN = request.getParameter("B_YN");
-		int B_EXTIME =Integer(request.getParameter("B_EXTIME"));
+		int B_EXTIME =Integer.parseInt(request.getParameter("B_EXTIME"));
+		System.out.println(B_EXTIME);
 		
 		BOOKING vo = new BOOKING(0,ID,null,B_EXDATE,B_TIME,B_PLACE,B_PRICE,B_YN,B_EXTIME);
 		int cnt = new BOOKING_DAO().joinBooking(vo);

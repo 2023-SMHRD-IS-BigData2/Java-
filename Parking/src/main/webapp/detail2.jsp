@@ -30,17 +30,23 @@ BOOKING booking=  (BOOKING)session.getAttribute("Booking");%>
                 </li>
                 </form>
             </ul>
+            
             <ul class="nav3_btnframei">
-     
                 <li class="nav3_buttoni2">
-                <form action="detail3.jsp">  
+                <form action="">  
                     <input type="hidden" value="<%=loginMember.getNAME() %>" name="ID">
-                    <input type="submit" value="결제내역">
                     <button onclick="go_nav4()">결제내역</button>
                     </form>
                 </li>
-            
             </ul>
+            <ul class="nav3_btnframei">
+                <li class="nav3_buttoni2">
+                <form action="login.html">  
+                    <button onclick="go_nav4()">로그아웃</button>
+                    </form>
+                </li>
+            </ul>
+           <!--  
             <ul class="nav3_logoutbox">
             <form action="login.html">
                 <li class="nav3_buttoni3">
@@ -48,6 +54,7 @@ BOOKING booking=  (BOOKING)session.getAttribute("Booking");%>
                 </li>
                 </form>
             </ul>
+            --> 
         </ul>
     </nav>
 </body>
