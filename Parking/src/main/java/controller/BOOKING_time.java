@@ -17,8 +17,7 @@ import model.PARKING;
 public class BOOKING_time extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		PARKING parking = (PARKING)session.getAttribute("Parking");
-//		MEMBER loginMember = (MEMBER)session.getAttribute("loginMember");		
+		
 		request.setCharacterEncoding("UTF-8");
 		
 		String ID = request.getParameter("ID");
@@ -27,7 +26,8 @@ public class BOOKING_time extends HttpServlet {
 		String B_PLACE =request.getParameter("B_PLACE");
 		String B_PRICE = request.getParameter("B_PRICE");
 		String B_YN = request.getParameter("B_YN");
-		int B_EXTIME =Integer(request.getParameter("B_EXTIME"));
+		int B_EXTIME =Integer.parseInt(request.getParameter("B_EXTIME"));
+		System.out.println(B_EXTIME);
 		
 		BOOKING vo = new BOOKING(0,ID,null,B_EXDATE,B_TIME,B_PLACE,B_PRICE,B_YN,B_EXTIME);
 		int cnt = new BOOKING_DAO().joinBooking(vo);
@@ -36,6 +36,8 @@ public class BOOKING_time extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("완료");
+			HttpSession session = request.getSession();
+			session.setAttribute("Booking", vo);
 			response.sendRedirect("./main.jsp");
 		}else {
 			System.out.println("실패");

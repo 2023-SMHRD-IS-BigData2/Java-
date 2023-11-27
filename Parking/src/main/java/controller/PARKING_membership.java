@@ -34,7 +34,7 @@ public class PARKING_membership extends HttpServlet {
 			System.out.println("주차장 정보 등록완료");
 			HttpSession session = request.getSession();
 			session.setAttribute("parking", vo);
-			response.sendRedirect("./parking_main.jsp");
+			response.sendRedirect("./ParkingSuccess.jsp");
 		}else {
 			System.out.println("주차장 정보 등록실패");
 			response.sendRedirect("./car.html");

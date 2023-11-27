@@ -6,7 +6,7 @@
 <!-- 봤던 에러일경우 mapper를 좀 더 보기 --> 
  <mapper namespace="database.PARKING_mapper">
  	<insert id="joinParking" parameterType="PARKING">
- 		insert into PARKING(P_CODE,P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_ABLE,P_INFO,P_YN,P_COUNT,P_POS) values(num_parkings.nextval,#{P_PLACE},#{P_TYPE},#{P_ADDRESS},#{P_FULL},#{P_PRICE},#{P_TIME}
+ 		insert into PARKING(P_CODE,P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_ABLE,P_INFO,P_YN,P_COUNT,P_POS) values(num_parkingss.nextval,#{P_PLACE},#{P_TYPE},#{P_ADDRESS},#{P_FULL},#{P_PRICE},#{P_TIME}
  									,#{P_ABLE},#{P_INFO},#{P_YN, jdbcType=VARCHAR},#{P_COUNT,jdbcType=VARCHAR},#{P_POS, jdbcType=VARCHAR})
  	</insert>
  	

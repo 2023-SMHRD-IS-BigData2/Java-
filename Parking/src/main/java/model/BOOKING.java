@@ -29,4 +29,5 @@ public class BOOKING {
 	public BOOKING(String B_PLACE) {
 		this.B_PLACE=B_PLACE;
 	}
+	
 }
