@@ -30,7 +30,7 @@ public class REVIEW_login extends HttpServlet {
 			System.out.println("로그인 성공!");
 			HttpSession session = request.getSession();
 			session.setAttribute("REVIEW", loginParking);
-			response.sendRedirect("./review_success.jsp");
+			response.sendRedirect("./detail.jsp");
 		} else {
 			System.out.println("로그인 실패...");
 			response.sendRedirect("./review.html");

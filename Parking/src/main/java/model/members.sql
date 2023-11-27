@@ -32,7 +32,8 @@ commit
 select * from REVIEW where P_CODE=1;
 
 
-select sum(R_1) as 후기1,sum(R_2) as 후기2,sum(R_3) as 후기3 ,sum(R_4) as 후기4 ,sum(R_5) as 후기5
+select p_code,id,sum(R_1) as 후기1,sum(R_2) as 후기2,sum(R_3) as 후기3 ,sum(R_4) as 후기4 ,sum(R_5) as 후기5
 from review
 where p_code = 2
-group by p_code;
+group by p_code,id
+order by sum(R_1) desc,sum(R_2) desc,sum(R_3) desc ,sum(R_4) desc ,sum(R_5) desc
