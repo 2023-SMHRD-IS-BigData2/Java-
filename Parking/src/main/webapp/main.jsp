@@ -136,7 +136,7 @@
     <nav class="nav5" id="nav5">
         <ul class="nav5_center">
             <li class="nav5_userbox">
-                <p><img class="main_img" src="./img/타이틀로고.png" alt=""></p>
+                <p><img class="main_img" src="./resources/img/주차랑께.png" alt=""></p>
                 
                 <div class="nav5_ask">어떤 점이 좋았나요?</div>
                 <p class="nav5_ask2">이 주차장에 어울리는 키워드를 골라주세요</p>
@@ -152,7 +152,7 @@
             <div class="modal">
                 <!-- 첫 번째 Modal의 내용 -->
                 <div class="modal-content">
-                  <p><img class="modal_img" src="./img/타이틀로고.png" alt=""></p>
+                  <p><img class="modal_img" src="./resources/img/주차랑께.png" alt=""></p>
                   <span>소중한 후기 감사합니다</span>
                   <button class="close">닫기</button>
                   
@@ -166,7 +166,7 @@
 
                 <!-- 두 번째 Modal의 내용 -->
                 <div class="modal-content">
-                  <p><img class="modal_img" src="./img/타이틀로고.png" alt=""></p>
+                  <p><img class="modal_img" src="./resources/img/주차랑께.png" alt=""></p>
                   <span>소중한 후기 감사합니다</span>
                   <button class="close">닫기</button>
                   
@@ -180,7 +180,7 @@
 
                 <!-- 세 번째 Modal의 내용 -->
                 <div class="modal-content">
-                  <p><img class="modal_img" src="./img/타이틀로고.png" alt=""></p>
+                  <p><img class="modal_img" src="./resources/img/주차랑께.png" alt=""></p>
                   <span>소중한 후기 감사합니다</span>
                   <button class="close">닫기</button>
                   
@@ -194,7 +194,7 @@
 
                 <!-- 네 번째 Modal의 내용 -->
                 <div class="modal-content">
-                  <p><img class="modal_img" src="./img/타이틀로고.png" alt=""></p>
+                  <p><img class="modal_img" src="./resources/img/주차랑께.png" alt=""></p>
                   <span>소중한 후기 감사합니다</span>
                   <button class="close">닫기</button>
                   
@@ -208,7 +208,7 @@
 
                 <!-- 다섯 번째 Modal의 내용 -->
                 <div class="modal-content">
-                  <p><img class="modal_img" src="./img/타이틀로고.png" alt=""></p>
+                  <p><img class="modal_img" src="./resources/img/주차랑께.png" alt=""></p>
                   <span>소중한 후기 감사합니다</span>
                   <button class="close">닫기</button>
                   
@@ -291,7 +291,7 @@
 
       function displayMarker(place) {
 
-          var imageSrc = './img/location-pin-1.png', // 마커이미지의 주소입니다    
+          var imageSrc = './resources/img/주차장마커.png', // 마커이미지의 주소입니다    
               imageSize = new kakao.maps.Size(40, 42), // 마커이미지의 크기입니다
               imageOption = { offset: new kakao.maps.Point(20, 42) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다
           // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
