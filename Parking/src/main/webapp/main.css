@@ -6,50 +6,6 @@
     --shadow-color: rgba(35, 0, 77, 0.2);
     --black-color: #010101;
 }
-/* 버튼 띄어오르게*/
-.btnFloat{
-  background: #83d6cc;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
-}
-.btnFloat:before {
-  content: 'Float';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 50px;
-  border-radius: 5px;
-  transition: all 0.2s ;
-  background: rgb(30, 128, 116);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
-}
-.btnFloat:hover {
-  /* margin-top: -2px; */
-  margin-left: 0px;
-  transform: scale(1.1,1.1);
-  -ms-transform: scale(1.1,1.1);
-  -webkit-transform: scale(1.1,1.1);
-  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
-}
-.login__buttons{
-  cursor: pointer;
-  /* display: block; */
-  /* padding: 1.125rem 1rem; */
-  width: 250px;
-  padding: 1rem;
-  margin: 2rem 0;
-  background-color: #5BC7BA;
-  color: #fff;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 0.5rem;
-  transition: 0.3s;
-  border: none
-}
-.login__buttons:hover {
-  background-color: #5BC7BA;
-}
 
 i {
     width: 19.2px;
@@ -148,23 +104,176 @@ a{
   
 }
 /*map*/
-.map_body{
+body {
     margin: 0;
-    width:100%; 
-    height:100%;
+    padding: 0;
 }
 #map{
-    width:100%; 
-    height:800px;
+   height: 100vh;
+   width: 100vh;
 }
-.map_icon_button{
+.wrap {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 240px;
+    height: 132px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    line-height: 1.5;
+}
+
+.wrap * {
+    padding: 0;
+    margin: 0;
+
+}
+
+.wrap .info {
+    position: relative;
+
+    border-radius: 5px;
+    border-bottom: 2px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wrap .info:nth-child(1) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+
+.info .title {
+    padding: 8px 29px 0 10px;
+    height: 30px;
+    background: var(--white-color);
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #888;
+    width: 17px;
+    height: 17px;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+
+.info .close:hover {
+    cursor: pointer;
+}
+
+.info .body {
+    position: relative;
+    overflow: hidden;
+}
+
+.info .desc {
+    position: relative;
+    margin: 10px;
+    height: 75px;
+}
+
+.desc .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.desc .jibun.ellipsis{ 
+    white-space: normal;  
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    width: 150px;
+    height: 50px;
+}
+
+.desc .jibun {
+    font-size: 11px;
+    color: #888;
+    margin-top: -2px;
+}
+
+.map_icon_button {
     position: relative;
     border: none;
     background-color: #5BC7BA;
     color: #f0f4f5;
-    top: 3px;
-    left: 65px;
+    width: 60px;
+    height: 30px;
+    bottom: 30px;
+    left: 160px;
     border-radius: 4px;
+}
+
+.info .link {
+    color: #5085BB;
+}
+
+.map_wrap,
+.map_wrap * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    font-size: 12px;
+}
+
+.map_wrap a,
+.map_wrap a:hover,
+.map_wrap a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.map_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#menu_wrap {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 20px;
+    margin: 10px 0 30px 10px;
+    padding: 5px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 14;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.bg_white {
+    background: #fff;
+}
+
+
+#menu_wrap .option {
+    text-align: center;
+}
+
+#menu_wrap .option p {
+    margin: 10px 0;
+}
+
+#menu_wrap .option button {
+    margin-left: 5px;
 }
 
 /*nav*/
@@ -797,7 +906,7 @@ input:focus {
     flex-wrap: wrap;
     position: relative;
     width: 95%;
-    height: 350px;
+    height: 150px;
     left: 2.5%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -844,8 +953,8 @@ input:focus {
     position: absolute;   
     width: 30%;
     height: 35px;
-    left: 67%;
-    bottom:5%;
+    left: 65%;
+    top: 65%;
 
 }
 .nav4_box{
