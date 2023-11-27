@@ -11,6 +11,7 @@
   		<typeAlias type="model.PARKING" alias="PARKING"/>
  		<typeAlias type="model.BOOKING" alias="BOOKING"/>
  		<typeAlias type="model.REVIEW" alias="REVIEW"/>
+ 		<typeAlias type="model.PAY" alias="PAY"/>
   </typeAliases>
   
   <environments default="development">
@@ -31,6 +32,7 @@
     <mapper resource="database/PARKING_mapper.xml"/>
     <mapper resource="database/BOOKING_mapper.xml"/>
     <mapper resource="database/REVIEW_mapper.xml"/>
+    <mapper resource="database/PAY_mapper.xml"/>
   </mappers>
 
 </configuration>

@@ -66,7 +66,7 @@
 		  <input type="hidden" name="B_YN" value="y">
           
                    
-          <input type="submit" class="login__buttons btnFloat" value="결제하기">
+          <input type="submit" class="login__buttons btnFloat" value="결제하기"">
           
         </form>
       </div>
