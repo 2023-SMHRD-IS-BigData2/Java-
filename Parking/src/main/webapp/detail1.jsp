@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +28,7 @@
             </li>
             <li class="nav2_info">
                 <span>상세 정보가 들어가는
-                    곳입니다aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                    곳입니다</span>
             </li>
         </ul>
         <hr class="nav2_hr">

@@ -28,14 +28,6 @@ public class PARKING_check extends HttpServlet {
 		String P_INFO = parking.getP_INFO();
 		
 		request.setCharacterEncoding("UTF-8");
-//		String P_PLACE = request.getParameter("P_PLACE");
-//		String P_TYPE = request.getParameter("P_TYPE");
-//		String P_ADDRESS = request.getParameter("P_ADDRESS");
-//		String P_FULL = request.getParameter("P_FULL");
-//		String P_PRICE = request.getParameter("P_PRICE");
-//		String P_TIME = request.getParameter("P_TIME");
-//		String P_ABLE = request.getParameter("P_ABLE");
-//		String P_INFO = request.getParameter("P_INFO");
 		String P_YN = request.getParameter("P_YN");
 		int P_COUNT = Integer.parseInt(request.getParameter("P_COUNT"));
 		int P_POS = Integer.parseInt(request.getParameter("P_POS"));
@@ -48,7 +40,7 @@ public class PARKING_check extends HttpServlet {
 		if (cnt > 0) {
 			System.out.println("수정 성공!");
 			session.setAttribute("Parking", updateParking);
-			response.sendRedirect("./parking_main.jsp");
+			response.sendRedirect("./ParkingCheckSuccess.jsp");
 		} else {
 			System.out.println("수정 실패..");
 			response.sendRedirect("./parkingCheck.jsp");

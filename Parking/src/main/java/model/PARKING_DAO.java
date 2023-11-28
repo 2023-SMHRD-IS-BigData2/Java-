@@ -1,7 +1,11 @@
 package model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+
+
 
 import database.SqlSessionManager;
 
@@ -48,5 +52,16 @@ public class PARKING_DAO {
 			sqlSession.close();
 		}
 		return loginParking;
+	}
+	//
+	public List<PARKING> allParking() {
+		List<PARKING> allParking = null;
+		try {
+			allParking = sqlSession.selectList("database.PARKING_mapper.allParking");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}return allParking;
 	}
 }

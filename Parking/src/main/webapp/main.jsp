@@ -1,3 +1,8 @@
+<%@page import="org.json.simple.JSONArray"%>
+<%@page import="org.json.simple.JSONObject"%>
+<%@page import="model.PARKING"%>
+<%@page import="java.util.List"%>
+<%@page import="model.PARKING_DAO"%>
 <%@page import="model.BOOKING"%>
 <%@page import="model.MEMBER"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -19,6 +24,7 @@
 <body class="main">
     <header class="filtering">
         <div class="filter_wrapper">
+        
             <div class="filter_start"></div>
             <a href="#" class="filter_icon"><i class="fa-solid fa-sliders"></i></i>
             </a>
@@ -76,6 +82,14 @@
                <button class="nav_menu">마이페이지</button>
          </li>
          </a>
+         <a href="booking.html" class="nav_list1">
+            <li class="nav_list_in">
+               <button class="nav_icon">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+               </button>
+               <button class="nav_menu">주차장예약</button>
+         </li>
+         </a>
          <%
          if (loginMember.getID().equals("admin")) {
          %>
@@ -123,7 +137,7 @@
      <%
          if (loginMember != null) {
          %>
-   <iframe src="./detail.html"
+   <iframe src="./detail1.jsp"
       onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()">
    </iframe>
    <iframe src="./detail2.jsp"
@@ -216,6 +230,13 @@
               </div>
         </ul>
     </nav>
+    
+
+
+
+    
+    
+    
 </body>
 <!--추가한 html 부분-->
 <div class="map_wrap">
@@ -241,7 +262,7 @@
       var overlays = [];
       var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = {
-              center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+              center: new kakao.maps.LatLng(35.14983896401361, 126.91984873413088), // 지도의 중심좌표
               level: 3 // 지도의 확대 레벨
           };
       // 지도를 생성합니다    
@@ -296,30 +317,28 @@
               imageOption = { offset: new kakao.maps.Point(20, 42) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다
           // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
           var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-              markerPosition = new kakao.maps.LatLng(place.y, place.x); // 마커가 표시될 위치입니다
+              markerPosition = new kakao.maps.LatLng(35.14983896401361, 126.91984873413088); // 마커가 표시될 위치입니다
 
           var marker = new kakao.maps.Marker({
               map: map,
-              position: new kakao.maps.LatLng(place.y, place.x),
+              position: new kakao.maps.LatLng(35.14983896401361, 126.91984873413088),
               image: markerImage
           });
           
+          //주소로 장소 표시
+          
+          
           // 커스텀 오버레이에 표시할 컨텐츠
-          var content = '<div class="wrap" id="wrap">' +
-              '<div class="info">' +
-              '<div class="title">' +
-              place.place_name +
-              '<div class ="close" onclick="closeOverlay()" title="닫기"></div>' +
-              '</div>' +
-              '<div class="body">' +
-              '<div class="desc">' +
-              '<div class="ellipsis">주차장 주소가 들어가는 곳입니다</div>' +
-              '<div class="jibun ellipsis">여기에는 주차장 상세 정보가 들어가야 합니다아아아아ㅏㅇ아아ㅏ아아아아아아아아ㅏㅏㅏ아아아앙</div>' + 
-              '<button class="map_icon_button" onclick="map_trans()">예약하기</button>' +
-              '</div>' +
-              '</div>' +
-              '</div>' +
-              '</div>';
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           var position = new kakao.maps.LatLng(place.y, place.x);
           // 마커 위에 커스텀오버레이 표시
           // 마커를 중심으로 커스텀  오버레이 표시하기 위해 css 이용해 위치 설정
@@ -497,7 +516,76 @@
 
     </script>
 
-
+<!--  db에서 내 위치 가져오기 -->
+	<p style="margin-top:-12px">
+	    <em class="link">
+	        <a href="javascript:void(0);" onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')">
+	            혹시 주소 결과가 잘못 나오는 경우에는 여기에 제보해주세요.
+	        </a>
+	    </em>
+	</p>
+	<div id="map" style="width:100%;height:350px;"></div>
+	
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=271d85ba9d35da1babada0764a40fc5b&libraries=services"></script>
+	<script>
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = {
+	        center: new kakao.maps.LatLng(35.14983896401361, 126.91984873413088), // 지도의 중심좌표
+	        level: 3 // 지도의 확대 레벨
+	    };  
+	
+	// 지도를 생성합니다    
+	var map = new kakao.maps.Map(mapContainer, mapOption); 
+	
+	// 주소-좌표 변환 객체를 생성합니다
+	var geocoder = new kakao.maps.services.Geocoder();
+	
+	<%
+	List<PARKING> parking =new PARKING_DAO().allParking();
+	System.out.print(parking.size());
+	%>
+    <%
+	  JSONObject obj = new JSONObject(); // JSONObject 생성
+	  JSONArray array = new JSONArray();
+    %>
+	
+	<%= obj.get("P_ADDRESS")%> // 생성한 값 이름으로 뽑기
+	
+	<%
+	for(int i = 0 ; i < parking.size(); i++){
+		 obj.put("P_PLACE", parking.get(i).getP_PLACE()); // 생성한 오브젝트에 값 넣기
+   		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());%>
+		// 주소로 좌표를 검색합니다
+		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {
+		
+		    // 정상적으로 검색이 완료됐으면 
+		     if (status === kakao.maps.services.Status.OK) {
+		
+		        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+		
+		        // 결과값으로 받은 위치를 마커로 표시합니다
+		        var marker = new kakao.maps.Marker({
+		            map: map,
+		            position: coords
+		        });
+		
+		        // 인포윈도우로 장소에 대한 설명을 표시합니다
+		        var infowindow = new kakao.maps.InfoWindow({
+		            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+'<%=obj.get("P_ADDRESS")%>'+'</div>'
+		        });
+		        infowindow.open(map, marker);
+		
+		        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+		        //map.setCenter(coords);
+		    } 
+	}
+	
+	    
+	)<%}%>; 
+	
+	
+	
+</script>
 
 
 </html>
