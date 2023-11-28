@@ -8,6 +8,7 @@
 </head>
 <body>
 <nav class="nav2" id="nav2">
+		<form action="booking.html" id="loginForm">
         <ul class="nav2_center">
            <li class="nav2_searchbox">
                 <form onsubmit="searchPlaces(); return false;">
@@ -71,9 +72,10 @@
                 </div>
             </div>
         </ul>
+         </form>
         <div class="nav2_btnframe">
-            <div class="nav2_button">
-                <button>예약하기</button>
+            <div class="nav2_button">          
+                <button type="submit" form="loginForm">예약하기</button>
             </div>
 
         </div>

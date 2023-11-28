@@ -80,7 +80,7 @@
     <section>
         <%
         if (isSuccess) { %>
-			<form action="PAY_service" method="post">
+         <form action="PAY_service" method="post">
             <div class="result wrapper">
                 <div class="box_section">  
                 <!-- 결제 성공 시 -->
@@ -96,24 +96,24 @@
                  <%--  <p>paymentKey : <%= jsonObject.get("paymentKey") %></p> --%>
                  <%-- <input type = "hidden" name = "B_EXTIME" value = "<%= joinBooking.getB_EXTIME() %>">  --%>
                  <table>
-                 	<tr>
-                 		<td><input type = "hidden"> 주차장 :</td>
-                 		<td> <%= parking.getP_PLACE() %> </td>
-                 	</tr>
-                 	<tr>
-                 		<td> <input type = "hidden" name = "A_YN" value = "<%= obj.get("paymentType") %>"> 결제 ID : </td>
-                 		<td> <%= loginMember.getID() %> </td>
-                 	</tr>
-                 	<tr>
-                 		<td> <input type = "hidden" name = "A_PRICE" value = "<%= parking.getP_PRICE() %>"> 결제 금액 :  </td>
-                 		<td> <%= parking.getP_PRICE() %> </td>
-                 	</tr>   
+                    <tr>
+                       <td><input type = "hidden"> 주차장 :</td>
+                       <td> <%= parking.getP_PLACE() %> </td>
+                    </tr>
+                    <tr>
+                       <td> <input type = "hidden" name = "A_YN" value = "<%= obj.get("paymentType") %>"> 결제 ID : </td>
+                       <td> <%= loginMember.getID() %> </td>
+                    </tr>
+                    <tr>
+                       <td> <input type = "hidden" name = "A_PRICE" value = "<%= parking.getP_PRICE() %>"> 결제 금액 :  </td>
+                       <td> <%= parking.getP_PRICE() %> </td>
+                    </tr>   
                  </table>
                  
                 
                   <div class="result wrapper">
                     <button type = "submit" class="button" style="margin-top:30px; ">예약 확인 페이지</button>
-                    <button class="button" style="margin-top:30px;background-color: #CCEFEB;color:#5BC7BA; ">메인 화면</button>
+                    <button type="button" class="button" onclick = "location.href='./main.jsp'" style="margin-top:30px;background-color: #CCEFEB;color:#5BC7BA; ">메인 화면</button>
                   </div>   
                 </div>
               </div>   

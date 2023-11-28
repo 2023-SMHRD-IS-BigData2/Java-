@@ -25,9 +25,9 @@
     <header class="filtering">
         <div class="filter_wrapper">
                  <form action = "PARKING_map">
-                       키워드 : <input type="text" name = "P_PLACE" size="15">
+                       <input type="text" name = "P_PLACE" size="15" style="display:inline" value="검색">
 
-                       <button type="submit">검색하기</button>
+                       <button type="submit" class="login__buttonss btnFloat" style="display:inline">검색하기</button>
                  </form>
             <div class="filter_start"></div>
             <a href="#" class="filter_icon"><i class="fa-solid fa-sliders"></i></i>
@@ -453,7 +453,9 @@
 	<%
 	for(int i = 0 ; i < parking.size(); i++){
 		 obj.put("P_PLACE", parking.get(i).getP_PLACE()); // 생성한 오브젝트에 값 넣기
-   		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());%>
+   		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());
+   		obj.put("P_INFO", parking.get(i).getP_INFO());
+   		%>
 		// 주소로 좌표를 검색합니다
 		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {
 		
@@ -482,8 +484,8 @@
 		              '</div>' +
 		              '<div class="body">' +
 		              '<div class="desc">' +
-		              '<div class="ellipsis">주차장 주소가 들어가는 곳입니다</div>' +
-		              '<div class="jibun ellipsis">여기에는 주차장 상세 정보가 들어가야 합니다아아아아ㅏㅇ아아ㅏ아아아아아아아아ㅏㅏㅏ아아아앙</div>' + 
+		              '<div class="ellipsis">'+ '<%=obj.get("P_ADDRESS")%>' +'</div>' +
+		              '<div class="jibun ellipsis">'+ '<%=obj.get("P_INFO")%>' +'</div>' + 
 		              '<button class="map_icon_button" onclick="map_trans()">예약하기</button>' +
 		              '</div>' +
 		              '</div>' +
