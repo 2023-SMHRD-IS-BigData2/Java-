@@ -263,7 +263,6 @@
 
 <script>
 
-
         // main과 연결된 모든 함수들
      // Modal을 가져옵니다.
      var modals = document.getElementsByClassName("modal");
@@ -394,18 +393,7 @@
            document.getElementById("nav2").style.display = "block";
            
        }
-     function removeOverlay() {
-         for ( var i = 0; i < overlays.length; i++ ) {
-             overlays[i].setMap(null);
-         }   
-         overlays = [];
-         console.log("removed");
-       
-     }
-   function closeOverlay() {
-         removeOverlay();
-         console.log("clicked");
-   }
+
     </script>
 
 <!--  db에서 내 위치 가져오기 -->
@@ -420,9 +408,9 @@
 	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=271d85ba9d35da1babada0764a40fc5b&libraries=services"></script>
 	<script>
-	 var markers = [];
-	 var overlays = [];
-	 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    var markers = [];
+    var overlays = [];
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	    mapOption = {
 	        center: new kakao.maps.LatLng(35.14983896401361, 126.91984873413088), // 지도의 중심좌표
 	        level: 3 // 지도의 확대 레벨
@@ -438,22 +426,12 @@
     imageOption = { offset: new kakao.maps.Point(20, 42) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다
 	// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
 	var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
-	    
+    
 	<%
-	List<PARKING> parking =new PARKING_DAO().allParking();
-	System.out.print(parking.size());
+	JSONObject obj = new JSONObject();
+    	obj.put("P_PLACE", mapParking.getP_PLACE());
+    	obj.put("P_ADDRESS", mapParking.getP_ADDRESS());
 	%>
-    <%
-	  JSONObject obj = new JSONObject(); // JSONObject 생성
-	  JSONArray array = new JSONArray();
-    %>
-	
-	<%= obj.get("P_ADDRESS")%> // 생성한 값 이름으로 뽑기
-	
-	<%
-	for(int i = 0 ; i < parking.size(); i++){
-		 obj.put("P_PLACE", parking.get(i).getP_PLACE()); // 생성한 오브젝트에 값 넣기
-   		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());%>
 		// 주소로 좌표를 검색합니다
 		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {
 		
@@ -499,13 +477,11 @@
 		          })
 		          markers.push(marker)
 		          overlays.push(overlay)
+		          
 		        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-		        //map.setCenter(coords);
+		        map.setCenter(coords);
 		    } 
-	}
-	
-	    
-	)<%}%>; 
+	}); 
 	
 	
 	

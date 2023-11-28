@@ -18,7 +18,12 @@
  	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
  		select * from PARKING where P_PLACE=#{P_PLACE}
  	</select>
+ 	
  	<select id="allParking" parameterType="PARKING" resultType="PARKING">
  		select * from PARKING 
+ 	</select>
+ 	
+ 	 <select id="mapParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_PLACE=#{P_PLACE}
  	</select>
  </mapper>

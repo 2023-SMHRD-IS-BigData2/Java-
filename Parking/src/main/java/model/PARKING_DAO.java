@@ -64,4 +64,17 @@ public class PARKING_DAO {
 			sqlSession.close();
 		}return allParking;
 	}
+	
+	public PARKING mapParking(PARKING vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		PARKING mapParking = null;
+		try {
+			mapParking = sqlSession.selectOne("database.PARKING_mapper.mapParking",vo);
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			sqlSession.close();
+		}
+		return mapParking;
+	}
 }

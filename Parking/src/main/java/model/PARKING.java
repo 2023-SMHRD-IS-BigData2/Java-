@@ -46,4 +46,15 @@ public class PARKING {
 	public PARKING(String P_PLACE) {
 		this.P_PLACE=P_PLACE;
 	}
+	
+	public PARKING(String P_PLACE, String P_TYPE, String P_ADDRESS, String P_PRICE, String P_TIME, String P_ABLE,
+			String P_INFO) {
+		this.P_PLACE=P_PLACE;
+		this.P_TYPE=P_TYPE;
+		this.P_ADDRESS=P_ADDRESS;
+		this.P_PRICE=P_PRICE;
+		this.P_TIME=P_TIME;
+		this.P_ABLE=P_ABLE;
+		this.P_INFO=P_INFO;
+	}
 }
