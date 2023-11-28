@@ -113,7 +113,7 @@
                 
                   <div class="result wrapper">
                     <button type = "submit" class="button" style="margin-top:30px; ">예약 확인 페이지</button>
-                    <button class="button" style="margin-top:30px;background-color: #CCEFEB;color:#5BC7BA; ">메인 화면</button>
+                    <button type="button" onclick = "location.href='./main.jsp'" style="margin-top:30px;background-color: #CCEFEB;color:#5BC7BA; ">메인 화면</button>
                   </div>   
                 </div>
               </div>   

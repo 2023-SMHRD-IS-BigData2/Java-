@@ -38,7 +38,7 @@ public class BOOKING_time extends HttpServlet {
 			System.out.println("완료");
 			HttpSession session = request.getSession();
 			session.setAttribute("Booking", vo);
-			response.sendRedirect("./main.jsp");
+			response.sendRedirect("./checkout.jsp");
 		}else {
 			System.out.println("실패");
 			response.sendRedirect("./booking_time.jsp");

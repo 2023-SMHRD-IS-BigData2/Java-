@@ -1,3 +1,4 @@
+<%@page import="model.PARKING"%>
 <%@page import="model.MEMBER"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%> 
@@ -13,6 +14,7 @@
 	<%
    //  예약한 parking 테이블과 예약한 member테이블 가져와야한다. 
 		 MEMBER loginMember = (MEMBER)session.getAttribute("loginMember"); 
+	 	 PARKING parking = (PARKING)session.getAttribute("Parking");
 	%>
 
 	<div class="login">
@@ -26,7 +28,7 @@
           <div class="login__forms">            
             <form action="main.jsp" class="login__success" id="login-up">          
               <h1 class=".login__success_title"><%=loginMember.getID() %>님 <br>
-              "주차장이름" 예약이<br> 완료되었습니다!</h1>
+              <%= parking.getP_PLACE() %><br>예약이<br> 완료되었습니다!</h1>
               <input type="submit" class="login__buttons btnFloat" value="홈으로 돌아가기">
                            
             </form>
