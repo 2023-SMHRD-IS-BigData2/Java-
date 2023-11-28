@@ -35,9 +35,11 @@ public class PAY_service extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("페이 DB 저장 성공");
+			response.sendRedirect("./bookingSuccess.jsp");
 	
 		} else {
 			System.out.println("페이 DB 저장 실패");
+			response.sendRedirect("./payFail.jsp");
 		} 
 		
 	}
