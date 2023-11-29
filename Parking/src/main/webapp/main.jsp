@@ -22,13 +22,16 @@
 </head>
 
 <body class="main">
-    <header class="filtering">
+     <header class="filtering">
         <div class="filter_wrapper">
                  <form action = "PARKING_map">
-                       <input type="text" name = "P_PLACE" size="15" style="display:inline" value="검색">
-
-                       <button type="submit" class="login__buttonss btnFloat" style="display:inline">검색하기</button>
-                 </form>
+                 <ul class="nav2_center">
+                 <li class="nav2_searchbox"  style="list-style:none">
+                    <button type="submit" class="nav2_input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="nav2_input--text" placeholder="주차장 검색" id="keyword" name = "P_PLACE" value="">
+               </li>
+               </ul>
+              </form>
             <div class="filter_start"></div>
             <a href="#" class="filter_icon"><i class="fa-solid fa-sliders"></i></i>
             </a>
@@ -390,10 +393,7 @@
          document.getElementById("nav4").style.display = "none"; 
        
      }
-     function map_trans() {
-           document.getElementById("nav2").style.display = "block";
-           
-       }
+   
      function removeOverlay() {
          for ( var i = 0; i < overlays.length; i++ ) {
              overlays[i].setMap(null);
@@ -455,6 +455,7 @@
 		 obj.put("P_PLACE", parking.get(i).getP_PLACE()); // 생성한 오브젝트에 값 넣기
    		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());
    		obj.put("P_INFO", parking.get(i).getP_INFO());
+   		obj.put("P_YN", parking.get(i).getP_YN());
    		%>
 		// 주소로 좌표를 검색합니다
 		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {
@@ -486,7 +487,8 @@
 		              '<div class="desc">' +
 		              '<div class="ellipsis">'+ '<%=obj.get("P_ADDRESS")%>' +'</div>' +
 		              '<div class="jibun ellipsis">'+ '<%=obj.get("P_INFO")%>' +'</div>' + 
-		              '<button class="map_icon_button" onclick="map_trans()">예약하기</button>' +
+		              '<h3><div class="ellipsis">'+ '<%=obj.get("P_YN")%>' +'</div></h3>' + 
+		              '<button class="map_icon_button" button type="submit" form="loginForm">예약하기</button>' +
 		              '</div>' +
 		              '</div>' +
 		              '</div>' +

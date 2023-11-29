@@ -10,12 +10,10 @@
 <nav class="nav2" id="nav2">
 		<form action="booking.html" id="loginForm">
         <ul class="nav2_center">
-           <li class="nav2_searchbox">
                 <form onsubmit="searchPlaces(); return false;">
                     <button type="submit" class="nav2_input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" class="nav2_input--text" placeholder="주차장 검색" id="keyword" value="광주 동명동 주차장">
+                  
                 </form>
-            </li>
         </ul>
         <ul class="nav2_imgbox">
             <div class="nav2_img">

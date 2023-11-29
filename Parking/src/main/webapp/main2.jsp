@@ -22,13 +22,16 @@
 </head>
 
 <body class="main">
-    <header class="filtering">
+     <header class="filtering">
         <div class="filter_wrapper">
                  <form action = "PARKING_map">
-                       키워드 : <input type="text" name = "P_PLACE" size="15">
-
-                       <button type="submit">검색하기</button>
-                 </form>
+                 <ul class="nav2_center">
+                 <li class="nav2_searchbox"  style="list-style:none">
+                    <button type="submit" class="nav2_input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="nav2_input--text" placeholder="주차장 검색" id="keyword" name = "P_PLACE" value="">
+               </li>
+               </ul>
+              </form>
             <div class="filter_start"></div>
             <a href="#" class="filter_icon"><i class="fa-solid fa-sliders"></i></i>
             </a>
@@ -431,6 +434,8 @@
 	JSONObject obj = new JSONObject();
     	obj.put("P_PLACE", mapParking.getP_PLACE());
     	obj.put("P_ADDRESS", mapParking.getP_ADDRESS());
+    	obj.put("P_INFO", mapParking.getP_INFO());
+    	obj.put("P_YN", mapParking.getP_YN());
 	%>
 		// 주소로 좌표를 검색합니다
 		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {
@@ -460,9 +465,10 @@
 		              '</div>' +
 		              '<div class="body">' +
 		              '<div class="desc">' +
-		              '<div class="ellipsis">주차장 주소가 들어가는 곳입니다</div>' +
-		              '<div class="jibun ellipsis">여기에는 주차장 상세 정보가 들어가야 합니다아아아아ㅏㅇ아아ㅏ아아아아아아아아ㅏㅏㅏ아아아앙</div>' + 
-		              '<button class="map_icon_button" onclick="map_trans()">예약하기</button>' +
+		              '<div class="ellipsis">'+'<%=obj.get("P_ADDRESS")%>'+'</div>' +
+		              '<div class="jibun ellipsis">'+ '<%=obj.get("P_INFO")%>' +'</div>' + 
+		              '<h3><div class="ellipsis">'+ '<%=obj.get("P_YN")%>' +'</div></h3>' + 
+		              '<button class="map_icon_button" onclick="map_trans()"  type="submit" form="loginForm">예약하기</button>' +
 		              '</div>' +
 		              '</div>' +
 		              '</div>' +
