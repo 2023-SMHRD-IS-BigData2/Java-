@@ -19,7 +19,7 @@
         <ul class="nav2_center">
             <li class="nav2_searchbox">
                 <button class="nav2_input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <input type="text" class="nav2_input--text" placeholder="주차장 검색">
+                <input type="text" class="nav2_input--text" placeholder="주차장 검색"autocomplete='off'>
             </li>
         </ul>
         <ul class="nav2_imgbox">

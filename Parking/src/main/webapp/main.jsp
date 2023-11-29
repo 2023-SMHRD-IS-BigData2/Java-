@@ -22,19 +22,21 @@
 </head>
 
 <body class="main">
-     <header class="filtering">
+      <header class="filtering">
         <div class="filter_wrapper">
-                 <form action = "PARKING_map">
-                 <ul class="nav2_center">
-                 <li class="nav2_searchbox"  style="list-style:none">
-                    <button type="submit" class="nav2_input--button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" class="nav2_input--text" placeholder="주차장 검색" id="keyword" name = "P_PLACE" value="">
+                
+                 <ul class="nav2_center2">
+                 <li class="nav2_searchbox2"  style="list-style:none">
+                     <form action = "PARKING_map">
+                    <button type="submit" class="nav2_input--button2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" autocomplete='off'class="nav2_input--text2" placeholder="주차장 검색" id="keyword" name = "P_PLACE" value="">
+                    </form>
                </li>
                </ul>
-              </form>
+            
             <div class="filter_start"></div>
-            <a href="#" class="filter_icon"><i class="fa-solid fa-sliders"></i></i>
-            </a>
+            <a href="#" class="filter_icon" style="display : none"><i class="fa-solid fa-sliders"></i></i>
+            </a> 
             <div class="filter_wrapper2">
                 <ul class="filter_section">
                     <li><a href="#"><i class="fa-solid fa-money-bill"></i> <span class="fil">가격이 합리적이에요</span></a></li>
@@ -253,7 +255,7 @@
             <div class="option">
                 <div>
                     <form onsubmit="searchPlaces(); return false;">
-                        키워드 : <input type="text" value="광주 동명동 주차장" id="keyword" size="15">
+                        키워드 : <input type="text" value="광주 동명동 주차장" id="keyword" size="15" autocomplete='off'>
                         <button type="submit">검색하기</button>
                     </form>
                 </div>

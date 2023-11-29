@@ -27,7 +27,7 @@
           <h1 class="login__title">예약내역 확인</h1>
           <div class="login__box">
             <i class='bx bx-user login__icon'></i>
-            <input type="text" placeholder="예약자 명" class="login__input" name="ID" >
+            <input type="text" placeholder="예약자 명" class="login__input" name="ID" autocomplete='off'>
           </div>
           
           <input type="submit" value="제출" class="login__buttons btnFloat" style="cursor: pointer;">

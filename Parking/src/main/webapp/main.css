@@ -49,91 +49,140 @@ ul {
     margin: 0;
 }
 /*header*/
-.filtering{
-    position: fixed;
-    top: 20px;
-    left: 220px;
-    width: 25%;
-    background-color: var(--white-color);
-    box-shadow: 0 0 10px  rgba(35, 0, 77, 0.2);
-    z-index: 9;
-    border-radius: 0px 4px 4px 0px;
-}
-a{
-    text-decoration: none; /*a태그의 하이퍼링크표시 없애기*/
-    color: var(--black-color);
-}
-.main{
-    margin: 0;
-}
-.filter_wrapper2{
-    position: fixed;
-    top: 70px;
-    left: 220px;
-    width: 25%;
-    background-color: var(--white-color);
-    box-shadow: 0 0 10px  var(--shadow-color);
-    z-index: 20;
-    border-radius: 0px 4px 4px 0px;
-    display: none;
-}
-.filter_wrapper2.active{
-    display: block;
-    color: var(--black-color);
-    min-width: 55px;
-    max-width: 250px;
+.filtering {
+   position: fixed;
+   top: 20px;
+   left: 220px;
+   width: 25%;
+   background-color: var(--white-color);
+   box-shadow: 0 0 10px rgba(35, 0, 77, 0.2);
+   z-index: 9;
+   border-radius: 0px 4px 4px 0px;
 }
 
-.filter_section{
-    list-style: none;  
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    
+a {
+   text-decoration: none; /*a태그의 하이퍼링크표시 없애기*/
+   color: var(--black-color);
 }
 
-.filter_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    padding: 0 16px;
-    position: relative;
-}
-.filter_start{
-    height: 40px;
-}
-.filter_icon{
-    position: absolute;
-    right: 10px;
-    height: 35px;
-    background-color: transparent;
-    color: var(--black-color);
-    border: none;
-    font-size: 1.5rem;
-}
-.filter_icon:hover{
-    color: var(--main-color);
-}
-.filter_section>li:hover a{
-    color: var(--main-color);
+.main {
+   margin: 0;
 }
 
-@media screen and (max-width: 700px){
-    .filtering{
-        display: none;
-        transition-duration: 0.5s;
-    }
-   
+.nav2_center2 {
+   position: relative;
+   min-width: 100%;
+   min-height: 100%;
+   margin: 0;
+   padding: 0;
 }
-@media screen and (max-width: 1000px){
-    .fil{
-        display: none;
-    }
-    .filter_wrapper2{
-        width: 6%;
-        transition-duration: 0.5s;
-    }
-  
+
+.nav2_searchbox2 {
+   position: relative;
+   width: 100%;
+   height: 35px;
+   top: 2px;
+   border: 1px solid var(--main-color);
+   border-radius: 4px;
+}
+
+.nav2_input--button2 {
+   position: absolute;
+   display: inline-block;
+   border: none;
+   background-color: transparent;
+   color: var(--main-color);
+   width: 25px;
+   height: 25px;
+   padding: 0;
+   top: 8px;
+   left: 2px;
+   font-size: 0.8rem;
+}
+
+.nav2_input--text2 {
+   position: absolute;
+   height: 35px;
+   width: 25vh;
+   left: 29px;
+   padding: 0;
+   background-color: transparent;
+   border-style: none;
+}
+
+.filter_wrapper2 {
+   position: fixed;
+   top: 70px;
+   left: 220px;
+   width: 25%;
+   background-color: var(--white-color);
+   box-shadow: 0 0 10px var(--shadow-color);
+   z-index: 20;
+   border-radius: 0px 4px 4px 0px;
+   display: none;
+}
+
+.filter_wrapper2.active {
+   display: block;
+   color: var(--black-color);
+   min-width: 55px;
+   max-width: 250px;
+}
+
+.filter_section {
+   list-style: none;
+   font-size: 0.9rem;
+   padding: 10px 20px;
+}
+
+.filter_wrapper {
+   border-radius: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 40px;
+   padding: 0 5px;
+   position: relative;
+}
+
+.filter_start {
+   height: 40px;
+}
+
+.filter_icon {
+   position: absolute;
+   right: 10px;
+   height: 35px;
+   background-color: transparent;
+   color: var(--black-color);
+   border: none;
+   font-size: 1.5rem;
+}
+
+.filter_icon:hover {
+   color: var(--main-color);
+}
+
+.filter_section>li:hover a {
+   color: var(--main-color);
+}
+
+@media screen and (max-width: 700px) {
+   .filtering {
+      display: none;
+      transition-duration: 0.5s;
+   }
+}
+
+@media screen and (max-width: 1000px) {
+   .fil {
+      display: none;
+   }
+   .filter_wrapper2 {
+      width: 6%;
+      transition-duration: 0.5s;
+   }
+
 }
 /*map*/
 body {
@@ -426,7 +475,7 @@ body {
     height: 35px;
     position: relative;
     left: 35px;
-    top: 20px;
+    top: 18px;
     border: 1px solid var(--main-color);
     border-radius: 4px;
 }
@@ -938,7 +987,7 @@ input:focus {
     flex-wrap: wrap;
     position: relative;
     width: 95%;
-    height: 150px;
+    height: 320px;
     left: 2.5%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -986,7 +1035,7 @@ input:focus {
     width: 30%;
     height: 35px;
     left: 65%;
-    top: 65%;
+   	bottom : 5%;
 
 }
 .nav4_box{

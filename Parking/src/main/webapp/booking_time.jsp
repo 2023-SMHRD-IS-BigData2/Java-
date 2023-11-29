@@ -48,14 +48,14 @@
           <!-- 입차시간 -->
           <div class="login__box">
             <i class='bx bx-lock login__icon'></i>
-            <input type="text" placeholder="입차 시간" name="B_TIME" class="login__input timepicker">
+            <input type="text" placeholder="입차 시간" name="B_TIME" class="login__input timepicker" autocomplete='off'>
           </div>
 
 
 		 <!-- 이용시간 -->
           <div class="login__box">
             <i class='bx bx-at login__icon'></i>
-            <input type="text" placeholder="이용 할 시간 (숫자만 입력 가능)" name="B_EXTIME" class="login__input" onkeydown="return checkNumber(event);">
+            <input type="text" placeholder="이용 할 시간 (숫자만 입력 가능)" name="B_EXTIME"autocomplete='off' class="login__input" onkeydown="return checkNumber(event);">
           </div>
  
           

@@ -17,7 +17,7 @@
         <div class="option">
             <div>
                 <form onsubmit="searchPlaces(); return false;">
-                    키워드 : <input type="text" value="광주동명동주차장" id="keyword" size="15"> 
+                    키워드 : <input type="text" value="광주동명동주차장" id="keyword" size="15" autocomplete='off'> 
                     <button type="submit">검색하기</button> 
                 </form>
             </div>
