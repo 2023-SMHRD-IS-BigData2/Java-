@@ -1,8 +1,9 @@
 
 
 # :pushpin: 주차랑께
->광주광역시 공유 주차장 정보 제공 및 예약 서비스  
-![반응형웹](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/2a49c0cd-fe5a-48df-b3cc-8501e5990cd7)
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/7c60fd65-506a-44eb-b82c-c372a06f969e)
+
+
 
 </br>
 
@@ -25,14 +26,24 @@
 </br>
 
 ## 3. ERD 설계
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
-![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
+![KakaoTalk_20231201_112729994 (2)](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/45ca5b52-4cce-47f1-8adc-119e90d03d67)
+
 
 
 ## 4. 핵심 기능
-이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
-사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
-이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/84258fa3-711c-4a92-b04b-4e972d9d89f0)
+![주차장검색](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/d970de3b-2400-4ab2-ad7a-b3bc876a503a)
+
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/64202b07-c3c5-4f8a-ba0f-aa32256fd73a)
+![결제](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/45f84424-e539-4eb8-a7e9-96e748415792)
+
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/171e1932-1298-489e-b00b-de13360c756c)
+![관리자-실시간-수정-버튼](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/4626f84d-f01c-482e-a006-2cea64743cf4)
+
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/ffb2535e-9fe6-4737-87cf-bb5692ea3381)
+![반응형웹](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/371faeff-97af-4a9f-8a5d-ae280f25e325)
+
+
 
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
