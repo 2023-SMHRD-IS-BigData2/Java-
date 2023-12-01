@@ -18,9 +18,7 @@
 
 <%
  // ------ 결제 승인 API 호출 ------
- // @docs https://docs.tosspayments.com/guides/payment-widget/integration#3-결제-승인하기
-  // TODO: 개발자센터에 로그인해서 내 결제위젯 연동 키 > 시크릿 키를 입력하세요. 시크릿 키는 외부에 공개되면 안돼요.
-  // @docs https://docs.tosspayments.com/reference/using-api/api-keys
+ //결제-승인하기
   String secretKey = "test_sk_6BYq7GWPVv5JnDeG4aBL3NE5vbo1:";
   
   Encoder encoder = Base64.getEncoder(); 
@@ -63,7 +61,6 @@
   JSONParser parser = new JSONParser();
   JSONObject jsonObject = (JSONObject) parser.parse(reader);
   responseStream.close();
-/*   Pay pay = (Pay)session.getAttribute("Pay"); */
 %>
 
 <!DOCTYPE html>
@@ -91,10 +88,7 @@
                     />
                     결제 성공
                   </h2>
-                  <!-- <p><input name ="A_DATE" type ="hidden" >test</p> -->
-<%--                   <p> 가격 : <%= pay.getA_PRICE() %> </p> --%>
-                 <%--  <p>paymentKey : <%= jsonObject.get("paymentKey") %></p> --%>
-                 <%-- <input type = "hidden" name = "B_EXTIME" value = "<%= joinBooking.getB_EXTIME() %>">  --%>
+
                  <table>
                     <tr>
                        <td><input type = "hidden"> 주차장 :</td>

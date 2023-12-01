@@ -284,15 +284,12 @@
          // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
          btns[num].onclick =  function() {
              modals[num].style.display = "block";
-             console.log(num);
+            
          };
       
          // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
          spanes[num].onclick = function() {
-             modals[num].style.display = "none";
-
-             console.log(num);
-             console.log("close");
+             modals[num].style.display = "none";     
              document.getElementById("nav5").style.display = "none"; 
              nav_list2[1].classList.remove("clicked");
              nav_list2[0].classList.add("clicked");
@@ -401,12 +398,10 @@
              overlays[i].setMap(null);
          }   
          overlays = [];
-         console.log("removed");
        
      }
    function closeOverlay() {
          removeOverlay();
-         console.log("clicked");
    }
     </script>
 
