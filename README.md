@@ -63,17 +63,17 @@
 - **Axios 비동기 요청** :pushpin: [코드 확인]()
   - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
 
-### 4.3. Controller
+### 4.2. Controller
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
 
 - **요청 처리** :pushpin: [코드 확인](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/blob/88c383de0796ff2281d368efb73b989733557df3/Parking/src/main/java/controller/PARKING_membership.java#L18)
   - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
 
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
+- **결과 응답** :pushpin: [코드 확인](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/blob/60b9cc660cab0106c303714c6955fe54217ed8ed/Parking/src/main/webapp/ParkingSuccess.jsp#L14)
+  - Service 계층에서 넘어온 로직 처리 결과(주차장 등록 성공)를 화면단에 응답해줍니다.
 
-### 4.4. Service
+### 4.3. Service
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
 
