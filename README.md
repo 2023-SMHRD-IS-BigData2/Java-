@@ -50,7 +50,8 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/a1cf871e-fcc5-43b8-b277-6e090a56b86f)
+사용자가 주차장명을 입력하면 주차장 정보를 응답해준다.
 
 ### 4.2. 사용자 요청
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
