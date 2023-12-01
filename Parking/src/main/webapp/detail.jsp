@@ -34,8 +34,7 @@ REVIEW review = (REVIEW)session.getAttribute("REVIEW");
                 ID <%= review.getID() %><br>
             </li>
             <li class="nav2_info">
-                <span>상세 정보가 들어가는
-                    곳입니다aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                <span>상세 정보가 들어가는 곳입니다</span>
             </li>
         </ul>
         <hr class="nav2_hr">

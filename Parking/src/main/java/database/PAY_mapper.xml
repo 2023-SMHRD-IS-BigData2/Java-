@@ -10,8 +10,4 @@
   		values(NUM_PAY.nextval,NUM_BOOKING.nextval,sysdate,#{A_YN},#{A_PRICE})
   	</insert>
   	
-  	<!-- 주차 시간 가져오기 위한 select문 -->
-<!--  	<select id="selectPrice" parameterType="BOOKING" resultType="BOOKING">
-  		select * from BOOKING Where B_EXTIME=#{B_EXTIME}
-  	</select> -->
   </mapper>

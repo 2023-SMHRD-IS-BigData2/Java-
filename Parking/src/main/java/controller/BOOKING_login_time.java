@@ -26,7 +26,6 @@ public class BOOKING_login_time extends HttpServlet {
 		System.out.println(vo.toString());
 		
 		if (loginParking != null) {
-			// 주차장 로그인(?) 성공
 			System.out.println("로그인 성공!");
 			HttpSession session = request.getSession();
 			session.setAttribute("Parking", loginParking);

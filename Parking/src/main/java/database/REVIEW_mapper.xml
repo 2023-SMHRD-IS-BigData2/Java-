@@ -12,13 +12,4 @@
 		group by P_CODE,ID
  	</select>
  	
- 	<!-- 
- 		<select id="loginParking" >
- 		select sum(R_1) as 후기1,sum(R_2) as 후기2,sum(R_3) as 후기3 ,sum(R_4) as 후기4 ,sum(R_5) as 후기5
-		from review
-		where P_CODE = #{P_CODE} 
-		group by p_code;
- 	</select>
- 	 -->
- 	
   </mapper>

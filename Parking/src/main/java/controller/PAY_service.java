@@ -23,9 +23,8 @@ public class PAY_service extends HttpServlet {
 		System.out.println(">>>Pay Service<<<");
 		
 		// 요청데이터 받기
-		// int B_EXTIME = Integer.parseInt(request.getParameter("B_EXTIME"));
 		String A_YN = request.getParameter("A_YN"); //결제구분
-		// int A_PRICE = Integer.parseInt(request.getParameter("A_PRICE")) * B_EXTIME; //결제 금액
+
 		String A_PRICE = request.getParameter("A_PRICE");
 		
 		PAY vo = new PAY(0, 0, null, A_YN, A_PRICE);

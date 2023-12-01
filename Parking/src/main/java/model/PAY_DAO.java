@@ -24,20 +24,5 @@ public class PAY_DAO {
 		}
 		return cnt;
 	} 
-	
-/*	// 입력한 주차시간 가져오기
-	public int selectPrice(BOOKING vo) {
-		int selectPrice = 0;
-		try {
-			selectPrice = sqlSession.selectOne("database.BOOKING_mapper.selectPrice", vo);
-		} catch (Exception e) {
-			// TODO: handle exception
-		} finally {
-			sqlSession.close();
-		}
-		
-		return selectPrice;
-		
-		}
-		*/
+
 }

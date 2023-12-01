@@ -26,7 +26,6 @@ public class REVIEW_login extends HttpServlet {
 		REVIEW loginParking = new REVIEW_DAO().loginParking(vo);
 		System.out.println(P_CODE);
 		if (loginParking != null) {
-			// 주차장 로그인(?) 성공
 			System.out.println("로그인 성공!");
 			HttpSession session = request.getSession();
 			session.setAttribute("REVIEW", loginParking);
