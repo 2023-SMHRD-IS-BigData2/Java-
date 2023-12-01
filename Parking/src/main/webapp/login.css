@@ -33,6 +33,10 @@ img {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+.login__content1{
+	 display: grid;
+  align-content: center;
+}
 .login__content {
   display: grid;
   align-content: space-around;
@@ -59,7 +63,7 @@ img {
     width: 348px;
 } */
 .login__register{
-  position: absolute;
+  /*position: absolute;*/
   bottom: 1rem;
   width: 100%;
   background-color: #f2f2f2;

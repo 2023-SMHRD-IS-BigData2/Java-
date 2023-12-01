@@ -40,11 +40,11 @@
         
         <div class="login__box">
           <i class='bx bx-lock login__icon'></i>
-          <input type="text" placeholder="현재 주차 대수" class="login__input" name="P_COUNT">
+          <input type="text" placeholder="현재 주차 대수" class="login__input" name="P_COUNT" autocomplete="off">
         </div>
         <div class="login__box">  
             <i class='bx bx-lock login__icon'></i>
-            <input type="text" placeholder="주차 가능 대수" class="login__input" name="P_POS">
+            <input type="text" placeholder="주차 가능 대수" class="login__input" name="P_POS" autocomplete="off">
             <!-- 숨겨 놓기!!! -->
         <input type="hidden" name="P_PlACE" value="<%=parking.getP_PLACE()%>">
         <input type="hidden" name="P_TYPE" value="<%=parking.getP_TYPE()%>">

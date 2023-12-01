@@ -458,6 +458,7 @@
    		obj.put("P_ADDRESS", parking.get(i).getP_ADDRESS());
    		obj.put("P_INFO", parking.get(i).getP_INFO());
    		obj.put("P_YN", parking.get(i).getP_YN());
+   		obj.put("P_FULL", parking.get(i).getP_FULL());
    		%>
 		// 주소로 좌표를 검색합니다
 		geocoder.addressSearch('<%=obj.get("P_ADDRESS")%>', function(result, status) {

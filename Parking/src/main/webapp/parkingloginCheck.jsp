@@ -22,7 +22,7 @@
               <h1 class=".login__success_title"> 주차장 입력</h1>
   <div class="login__box">
           <i class='bx bx-lock login__icon'></i>
-          <input type="text" placeholder="수정 할 주차장 명" class="login__input" name="P_PLACE">
+          <input type="text" placeholder="수정 할 주차장 명" class="login__input" name="P_PLACE" autocomplete="off">
         </div>
               <input type="submit" class="login__buttons btnFloat" value="제출">
                            
