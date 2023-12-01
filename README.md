@@ -2,7 +2,7 @@
 
 # :pushpin: 주차랑께
 >광주광역시 공유 주차장 정보 제공 및 예약 서비스  
-> 데모사이트 링크
+![반응형웹](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/2a49c0cd-fe5a-48df-b3cc-8501e5990cd7)
 
 </br>
 
