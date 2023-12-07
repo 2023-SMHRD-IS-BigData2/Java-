@@ -47,7 +47,7 @@
 <br>
 
 ## 4. 핵심 기능
-## 사용자 주요기능
+## - 사용자 주요기능
 ### 주차장 정보제공 기능 -> 검색
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/84258fa3-711c-4a92-b04b-4e972d9d89f0)
 ![주차장검색](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/d970de3b-2400-4ab2-ad7a-b3bc876a503a)
@@ -56,7 +56,7 @@
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/64202b07-c3c5-4f8a-ba0f-aa32256fd73a)
 ![결제](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/45f84424-e539-4eb8-a7e9-96e748415792)
 
-## 관리자 주요기능
+## - 관리자 주요기능
 ### 현재 실시간 정보 수정 기능
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/171e1932-1298-489e-b00b-de13360c756c)
 ![관리자-실시간-수정-버튼](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/4626f84d-f01c-482e-a006-2cea64743cf4)
