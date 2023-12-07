@@ -47,7 +47,7 @@
 <br>
 
 ## 4. 핵심 기능
-### 사용자 주요기능
+## 사용자 주요기능
 ### 주차장 정보제공 기능 -> 검색
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/84258fa3-711c-4a92-b04b-4e972d9d89f0)
 ![주차장검색](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/d970de3b-2400-4ab2-ad7a-b3bc876a503a)
