@@ -26,7 +26,17 @@
 <hr>
 <br>
 
-## 2. 사용 기술
+## 2. 프로젝트 개요
+### 주제 : 광주광역시 공유 주차장 정보 제공 및 예약 서비스
+- 사용자 주차장 예약 기능 제공
+- 주차장 관리인이 주차장 위치 금액 등을 입력하여 직접 주차장 추가 가능
+- 주차장 관리인이 주차 가능 여부 실시간으로 변경 기능 제공
+<br>
+<hr>
+<br>
+
+
+## 3. 사용 기술
 |    `개발 환경`    |   `상세 보기`    |
 | -------------- | -------------- |
 | <b>FRONT-END</b>  | ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)    |
@@ -39,14 +49,14 @@
 <hr>
 <br>
 
-## 3. ERD 설계
+## 4. ERD 설계
 ![KakaoTalk_20231201_112729994 (2)](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/45ca5b52-4cce-47f1-8adc-119e90d03d67)
 
 <br>
 <hr>
 <br>
 
-## 4. 핵심 기능
+## 5. 핵심 기능
 ## - 사용자 주요기능
 ### 주차장 정보제공 기능 -> 검색
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/84258fa3-711c-4a92-b04b-4e972d9d89f0)
@@ -130,7 +140,7 @@
 <hr>
 <br>
 
-## 5. 핵심 트러블 슈팅
+## 6. 핵심 트러블 슈팅
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/46e768b9-e975-4257-a433-3cddbbfc998b)
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/760dc59a-9e60-4c2a-afd0-1fdf87851ce3)
 ![image](https://github.com/2023-SMHRD-IS-BigData2/Javachip_parking/assets/145406855/7007f464-25c6-49ed-af1e-48fde480ab32)
@@ -139,5 +149,3 @@
 <hr>
 <br>
 
-## 6. 회고 / 느낀점
->프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
